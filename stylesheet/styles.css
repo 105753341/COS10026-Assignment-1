@@ -14,7 +14,7 @@ nav a:hover{
     background-color: #ff6200
 }
 
-/*jobs page style*/
+/*jobs page styling*/
 #jobs {
     display: flex;
     flex-direction: column;
