@@ -53,7 +53,7 @@ aside {
     margin: 4px;
     max-width: 30%;
 }
-h1, h2, h3{
+.main-heads{
     color: maroon;
 }
 body {
@@ -70,17 +70,72 @@ button {
     background: linear-gradient(to right, red, maroon, maroon);
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
-
-
 }
 
 button:hover{
     color: whitesmoke;
     background: linear-gradient(to right, maroon, maroon, black);
 }
+.btn{
+    color: whitesmoke;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
 
+.btn:hover {
+    transform: scale(1.1);
+}
 
+.footer {
+  background-color: maroon;
+  color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer-section h2,
+.footer-section h3{
+    color: white;
+}
+.footer-section h3{
+    margin-left: 38px;
+}
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px 20px;
+}
+.footer-section ul{ 
+    list-style: none;
+}
+.footer-bottom {
+  width: 100%;
+  border-top: 1px solid whitesmoke;
+  margin-top: 20px;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+}
+.webpages{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.webpages:hover{
+    text-decoration: underline;
+}
 
+.jira_proj{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.jira_proj:hover {
+    text-decoration: underline;
+}
 /* Media screens: tablets, small laptops */
 @media screen and (max-width: 1024px) {
   #jobs-content {
@@ -117,5 +172,18 @@ button:hover{
   nav a {
     padding: 0.4em 0.6em;
     font-size: 1rem;
+  }
+}
+/*for footer*/
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 }
