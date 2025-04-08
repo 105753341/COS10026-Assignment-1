@@ -17,10 +17,10 @@ nav a:hover{
 
 .parallax {
   /* The image used */
-  background-image: "images/parallax image.jpg";
+  background-image: "images/parallax-image.png";
 
   /* Set a specific height */
-  min-height: 500px; 
+  min-height: 10px; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
