@@ -15,19 +15,19 @@ nav a:hover{
     border-color: maroon;
 }
 
-.parallax {
-  /* The image used */
-  background-image: "images/parallax-image.png";
+/*background image styling*/
+.parallax{
+  background-image: url(stylesheet/iamges/parallax-image.png);
 
-  /* Set a specific height */
-  min-height: 10px; 
+  min-height: 500px;
 
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/*About company page styling*/
 
 #about-company{
   display: flex;
