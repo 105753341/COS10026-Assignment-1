@@ -9,7 +9,10 @@
 <body>
 <!-- Header Section -->
 <header>
+    <br><img src="images/logo_cropped.png" alt="Company Logo" style="margin-bottom:-3%; width:15%;height:15%;"></br>
+    <hr>
     <h1>Welcome to TechNova Job Application</h1>
+    <hr>
 </header>
 
 <!-- Main Content -->
@@ -68,7 +71,7 @@
             <input type="tel" id="phone" name="phone" required pattern="\d{8,12}" title="Phone number must be 8 to 12 digits"><br>
 
             <label for="skills">Required Technical Skills:</label><br>
-            <input type="checkbox" id="html" name="skills" value="HTML"> HTML<br>
+            <input type="checkbox" id="html" name="skills" value="HTML" required> HTML<br>
             <input type="checkbox" id="css" name="skills" value="CSS"> CSS<br>
             <input type="checkbox" id="javascript" name="skills" value="JavaScript"> JavaScript<br><br>
 
@@ -105,7 +108,7 @@
         </ul>
     </div>
     <div class="footer-bottom">
-        <p>&copy;2025 TechNova All Rights Reserved</p>
+        <p>&copy;<span id="year"></span> TechNova All Rights Reserved</p>
         <p><a href="https://cos10026-web-project.atlassian.net/jira/software/projects/T2WPA/boards/3?atlOrigin=eyJpIjoiNTgyNzczZjE5NzBmNDIxMDk1NmQ1MDI5MzRlMDE5NWMiLCJwIjoiaiJ9" class="jira_proj" target="_blank">Jira</a></p>
     </div>
 </footer>
