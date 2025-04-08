@@ -17,9 +17,9 @@ nav a:hover{
 
 /*background image styling*/
 .parallax{
-  background-image: url(stylesheet/iamges/parallax-image.png);
+  background-image: url(/stylesheet/images/parallax-image.png);
 
-  min-height: 500px;
+  min-height: 450px;
 
   background-attachment: fixed;
   background-position: center;
