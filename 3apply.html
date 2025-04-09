@@ -9,8 +9,8 @@
 <body>
 <!-- Header Section -->
 <header>
-    <img class="logo" src="images/logo_cropped.png" alt="Company Logo">
-    <hr>
+    <img src="images/logo_cropped.png" alt="Company Logo" style="margin-bottom:-3%; width:10%;height:10%;"><br>
+    <br><br><hr>
     <h1>Welcome to TechNova Job Application</h1>
     <hr>
 </header>
@@ -22,6 +22,7 @@
         <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST">
             <label for="jobRef">Job Reference Number:</label>
             <select id="jobRef" name="jobRef" required>
+                <option value="" disabled selected>Select a job reference</option>
                 <option value="CYB71">CYB71</option>
                 <option value="NET17">NET17</option>
             </select><br>
@@ -33,7 +34,7 @@
             <input type="text" id="lastName" name="lastName" required maxlength="20" pattern="[A-Za-z]+" title="Only letters are allowed"><br>
 
             <label for="dob">Date of Birth:</label>
-            <input type="text" id="dob" name="dob" required placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" title="Format: dd/mm/yyyy"><br>
+            <input type="text" id="dob" name="dob" required placeholder="dd/mm/yyyy"  pattern="\d{2}/\d{2}/\d{4}" title="Format: dd/mm/yyyy"><br>
 
             <fieldset>
                 <legend>Gender:</legend>
@@ -51,6 +52,7 @@
 
             <label for="state">State:</label>
             <select id="state" name="state" required>
+                <option value="" disabled selected>Select a state</option>
                 <option value="VIC">VIC</option>
                 <option value="NSW">NSW</option>
                 <option value="QLD">QLD</option>
@@ -70,7 +72,7 @@
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" required pattern="\d{8,12}" title="Phone number must be 8 to 12 digits"><br>
 
-            <label for="skills">Required Technical Skills:</label><br>
+            <label>Required Technical Skills:</label><br>
             <input type="checkbox" id="html" name="skills" value="HTML" required> HTML<br>
             <input type="checkbox" id="css" name="skills" value="CSS"> CSS<br>
             <input type="checkbox" id="javascript" name="skills" value="JavaScript"> JavaScript<br><br>

@@ -231,10 +231,11 @@ form {
   box-shadow: 0 2px 10px rgba(50, 0, 0, 0.2);
 }
 
-form label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
+form label,
+form input,
+form select,
+form textarea {
+  margin-bottom: 15px;
 }
 
 form input[type="text"],
@@ -250,9 +251,11 @@ form select {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-form textarea {
-  resize: vertical;
-  height: 100px;
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: 2px solid maroon;
+  outline-offset: 2px;
 }
 
 form input[type="submit"] {
@@ -264,8 +267,41 @@ form input[type="submit"] {
   cursor: pointer;
   margin-top: 20px;
   text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 form input[type="submit"]:hover {
   background: linear-gradient(to right, maroon, maroon, black);
+  transform: scale(1.05);
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+  accent-color: maroon;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form textarea,
+  form select {
+    font-size: 0.9rem;
+  }
+
+  form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  form input[type="checkbox"] {
+    margin: 5px 0;
+  }
 }
