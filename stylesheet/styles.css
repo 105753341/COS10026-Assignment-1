@@ -38,7 +38,7 @@ nav a:hover{
 }
       /*background image styling*/
       .parallax{
-        background-image: url(/stylesheet/images/parallax-image.png);
+        background-image: url(/stylesheet/images/image_parallax.jpg);
 
         min-height: 450px;
 
@@ -240,7 +240,6 @@ body {
     align-items: flex-start;
     gap: 10px;
   }
-}
 }
 form {
   max-width: 600px;
