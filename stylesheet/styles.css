@@ -50,9 +50,28 @@ nav a:hover{
 
 
 /*jobs page styling*/
-hr {
-  color: maroon;
-  border-style: solid;
+.hiring {
+  text-align: center;
+  background-color: maroon;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 80%;
+  border: transparent solid 1px;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px;
+  box-shadow: 0 2px 10px rgb(243, 212, 212);
+  max-width: 100%;
+  scroll-behavior: smooth;
+  display: inline-block;
+  transition: transform 0.5s ease
+}
+.hiring:hover{            /*The we're hiring box grows out on hover*/
+  transform: scale(1.1);
+}
+/*It scrolls down to the jobs*/
+#scroll-link {
+  text-decoration: none;
+  color: whitesmoke;
 }
 #jobs {
     display: flex;
@@ -60,6 +79,7 @@ hr {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    text-align: left;
 }
 
 #jobs-content {
@@ -68,15 +88,18 @@ hr {
     gap: 20px;
     padding: 20px;
 }
-
-#jobs article {
+h3{
+    color: maroon;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#jobs article{
     border: transparent solid 1px;
     border-radius: 8px;
     font-size: small;
     padding: 16px;
     margin: 10px;
     box-shadow: 0 2px 10px rgba(50, 0, 0, 0.2);
-    max-width: 45%;
+    max-width: 70%;
 }
 
 aside {
@@ -84,9 +107,10 @@ aside {
     border: 1px solid maroon;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(80, 0, 0, 0.4);
-   padding: 5px;
+    padding: 6px;
     margin: 4px;
     max-width: 30%;
+    margin-top: 120px;
 }
 .main-heads{
     color: maroon;
@@ -95,7 +119,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-button {
+.btn {
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -105,23 +129,17 @@ button {
     background: linear-gradient(to right, red, maroon, maroon);
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-button:hover{
-    color: whitesmoke;
-    background: linear-gradient(to right, maroon, maroon, black);
-}
-.btn{
-    color: whitesmoke;
     text-decoration: none;
     display: inline-block;
     transition: transform 0.3s ease;
 }
 
-.btn:hover {
+.btn:hover{
+    color: whitesmoke;
+    background: linear-gradient(to right, maroon, maroon, black);
     transform: scale(1.1);
 }
-
+/*footer design*/
 .footer {
   background-color: maroon;
   color: whitesmoke;
@@ -131,6 +149,7 @@ button:hover{
   padding: 40px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .footer-section h2,
 .footer-section h3{
     color: white;
@@ -163,7 +182,7 @@ button:hover{
 .webpages:hover{
     text-decoration: underline;
 }
-
+/*link to jira in footer*/
 .jira_proj{
     color: whitesmoke;
     text-decoration: none;
@@ -221,6 +240,7 @@ button:hover{
     align-items: flex-start;
     gap: 10px;
   }
+}
 }
 form {
   max-width: 600px;
