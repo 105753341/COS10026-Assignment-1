@@ -2,7 +2,8 @@
 nav a {
     display: inline-block;
     position: relative;
-    left: 65.8%;
+    padding-right: 5px;
+    left: 58.1%;
     top: 8px;
     text-decoration: none;
     padding:0.2em 0.6em;
@@ -15,17 +16,7 @@ nav a:hover{
     border-color: maroon;
 }
 
-/*background image styling*/
-.parallax{
-  background-image: url(/stylesheet/images/parallax-image.png);
 
-  min-height: 450px;
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 /*About company page styling*/
 
@@ -45,6 +36,18 @@ nav a:hover{
   box-shadow: 0 2px 10px rgba(50, 0, 0, 0.2);
   max-width: 70%;
 }
+      /*background image styling*/
+      .parallax{
+        background-image: url(/stylesheet/images/parallax-image.png);
+
+        min-height: 450px;
+
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
 
 /*jobs page styling*/
 hr {
