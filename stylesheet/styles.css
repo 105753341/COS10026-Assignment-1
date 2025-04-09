@@ -20,6 +20,22 @@ nav a:hover{
 
 /*About company page styling*/
 
+.tagline {
+  text-align: center;
+  background-color: maroon;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 80%;
+  border: transparent solid 1px;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px;
+  box-shadow: 0 2px 10px rgb(243, 212, 212);
+  max-width: 100%;
+  scroll-behavior: smooth;
+  display: inline-block;
+  transition: transform 0.5s ease
+}
+
 #about-company{
   display: flex;
     align-items: flex-start;
