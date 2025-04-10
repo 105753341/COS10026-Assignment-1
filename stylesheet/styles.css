@@ -1,7 +1,6 @@
 /* navigation menu styles*/
 nav a {
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
     position: relative;
     padding-right: 5px;
     left: 58.1%;
