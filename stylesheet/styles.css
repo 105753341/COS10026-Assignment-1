@@ -10,13 +10,6 @@ nav a {
     border: 4px solid maroon;
     background-color: whitesmoke;
    }   
-   
-nav a:hover{
-    background-color: white;
-    border-color: maroon;
-}
-
-
 
 /*About company page styling*/
 
@@ -54,7 +47,7 @@ nav a:hover{
 }
       /*background image styling*/
       .parallax{
-        background-image: url(./stylesheet/images/image_parallax.jpg);
+        background-image: url(./images/image_parallax.jpg);
 
         min-height: 450px;
 
