@@ -11,6 +11,40 @@ nav a {
     background-color: whitesmoke;
    }   
 
+ @media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+   }
+  
+   .nav-menu a {
+    width: 100%;
+    text-align: center;
+     border-top: 1px solid #333;
+    border-bottom: 1px solid #111;
+  }
+}
+
+@media (max-width: 600px) {
+    .nav-menu {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .nav-menu button {
+    text-align: left;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #222;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu a {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+}
+
 /*About company page styling*/
 
 .tagline {
