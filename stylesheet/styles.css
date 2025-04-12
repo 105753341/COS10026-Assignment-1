@@ -1,6 +1,17 @@
 /* navigation menu styles*/
+.flex-container {
+  display: flex;
+  gap: 1rem; 
+}
+
+.item {
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
 nav a {
-    display: inline-flex;
+    display: flex;
     position: relative;
     padding-right: 5px;
     left: 58.1%;
@@ -11,6 +22,14 @@ nav a {
     background-color: whitesmoke;
     margin: auto;
    }   
+/*
+  <img class="logo_cropped" src="images/logo_cropped.png" alt="Company Logo">
+        <nav class="nav-menu">
+            <a href="2jobs.html">Job Descriptions</a> 
+            <a href="3apply.html">Application Page</a> 
+            <a href="4about.html">Group Details</a> 
+            <a href="mailto:info@technova.com.au">Email Us</a>
+
 
 @media (max-width: 768px) {
   .nav-menu {
@@ -51,7 +70,7 @@ nav a {
     padding: 8px 10px;
     font-size: x-small;
   }
-}
+}*/
 
 /* header logo styling*/
 .logo_cropped {
