@@ -9,14 +9,15 @@ nav a {
     padding:0.2em 0.6em;
     border: 4px solid maroon;
     background-color: whitesmoke;
+    margin: auto;
    }   
 
-  
-
- @media (max-width: 768px) {
+@media (max-width: 768px) {
   .nav-menu {
+    grid-template-columns: 1fr 1fr;
     flex-direction: column;
     align-items: center;
+    display: flex;
    }
   
    .nav-menu a {
@@ -29,8 +30,11 @@ nav a {
 
 @media (max-width: 600px) {
     .nav-menu {
+      grid-template-columns: 1fr 1fr;
     flex-direction: column;
+    display: flex;
     align-items: stretch;
+    font-size: x-small;
   }
   
   .nav-menu button {
@@ -42,10 +46,28 @@ nav a {
 
 @media (max-width: 480px) {
   .nav-menu a {
+    grid-template-columns: 1fr 1fr;
     font-size: 16px;
     padding: 8px 10px;
+    font-size: x-small;
   }
 }
+
+/* header logo styling*/
+.logo_cropped {
+  margin-bottom: -3%;
+  width: 15%;
+  height: 10%;
+}
+
+@media (max-width: 480px) {
+  .logo_cropped {
+    margin-bottom: -3%;
+    width:60%;
+    height: 40%;
+  }
+}
+
 
 /*About company page styling*/
 
