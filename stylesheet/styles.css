@@ -1,18 +1,27 @@
 /* navigation menu styles*/
-nav a {
-    display: inline-flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    position: relative;
-    padding-right: 5px;
-    text-decoration: none;
-    padding:0.2em 0.6em;
-    border: 4px solid maroon;
-    background-color: whitesmoke;
-   }  
-   
-.flex-container {
+nav {
   display: flex;
+  justify-content: flex-end; 
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px;
+  background-color: white;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.4em 0.8em;
+  border: 4px solid maroon;
+  background-color: whitesmoke;
+  color: black;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: maroon;
+  color: white;
 }
 
 
@@ -384,10 +393,10 @@ form input[type="radio"] {
   background-color: #f0f0f0;
 }
 
-/* table cell styles (doesn't include header cells */
+/* table cell styles*/
 #about-table th, #about-table tr td {
   background-color: #f8f8f8;
-  padding: 0.5em 0.5em; /*em adapts from parent elements font size */
+  padding: 10px; /*em adapts from parent elements font size */
 }
 
 /*targets list elements inside table-body (applies to children)*/
@@ -411,6 +420,7 @@ form input[type="radio"] {
   /* align-items: flex-start; */
 }
 
+/* section style division styling */
 .about-section div {
   border: transparent solid 1px;
   border-radius: 8px;
@@ -426,13 +436,68 @@ form input[type="radio"] {
 #about-group-photo {
   display: flex; 
   flex-direction: column;
-  align-items: center; /* justify content for row*/
+  align-items: center; 
   float: right;
 }
 
 /* about group photo styling */
 #about-group-photo img {
   border: 2px solid maroon;
-  width: 100%;
-  height: auto;
+  width: 400px;
+}
+
+/* about table header styling */
+#about-table th {
+  font-weight: bold;
+  background-color: #c9c9c9;
+  padding: 10px;
+}
+
+/* about definition list term styles */
+#about-definition-list dt {
+  text-decoration: underline;
+  font-weight: bold;
+  margin-bottom: 5px; 
+}
+
+/* about definition list definition styles */
+#about-definition-list dd {
+  margin-bottom: 10px; 
+}
+
+/* about section styles when width is not standard */
+@media only screen and (max-width: 800px) {
+  /* about section division styles (to avoid targetting h1/h2) */
+  .about-section div {
+    font-size: 14px;
+  }
+
+  /* about section division styles */
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    align-items: center;
+  }
+
+  #about-aside, #about-group-photo {
+    float: none;
+    flex-direction: column;
+    display: flex;
+    max-width: 60%;
+    justify-content: center; 
+    align-items: center; 
+    font-size: 14px;
+  }
+
+  #about-group-photo {
+    max-width: 100%;
+  }
+}
+
+/* header image styles */
+header img {
+  margin-bottom:-3%; 
+  width:15%;
+  height:15%;
 }
