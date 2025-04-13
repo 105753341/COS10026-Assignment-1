@@ -1,19 +1,73 @@
 /* navigation menu styles*/
 nav a {
     display: inline-flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     position: relative;
     padding-right: 5px;
-    left: 58.1%;
-    top: 8px;
     text-decoration: none;
     color: whitesmoke;
     padding:0.2em 0.6em;
-    border: 4px solid transparent;
-    background-color: maroon;
-   }   
-nav a:hover{
-    text-decoration: underline;
+    border: 4px solid maroon;
+    background-color: whitesmoke;
+   }  
+   
+.flex-container {
+  display: flex;
 }
+
+/*
+@media (max-width: 768px) {
+  .nav-menu {
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+   }
+  
+   .nav-menu a {
+    width: 100%;
+    text-align: center;
+     border-top: 1px solid #333;
+    border-bottom: 1px solid #111;
+  }
+}
+
+@media (max-width: 600px) {
+    .nav-menu {
+      grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    display: flex;
+    align-items: stretch;
+    font-size: x-small;
+  }
+  
+  .nav-menu button {
+    text-align: left;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #222;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu a {
+    grid-template-columns: 1fr 1fr;
+    font-size: 16px;
+    padding: 8px 10px;
+    font-size: x-small;
+  }
+}*/
+
+/* header logo styling*/
+.logo_cropped {
+  margin-bottom: -3%;
+  width: 15%;
+  height: 10%;
+}
+
+
+
+
 /*About company page styling*/
 
 .tagline {
@@ -361,10 +415,10 @@ form input[type="radio"] {
   background-color: #f0f0f0;
 }
 
-/* table cell styles (doesn't include header cells */
+/* table cell styles*/
 #about-table th, #about-table tr td {
   background-color: #f8f8f8;
-  padding: 0.5em 0.5em; /*em adapts from parent elements font size */
+  padding: 10px; /*em adapts from parent elements font size */
 }
 
 /*targets list elements inside table-body (applies to children)*/
@@ -388,6 +442,7 @@ form input[type="radio"] {
   /* align-items: flex-start; */
 }
 
+/* section style division styling */
 .about-section div {
   border: transparent solid 1px;
   border-radius: 8px;
@@ -403,7 +458,7 @@ form input[type="radio"] {
 #about-group-photo {
   display: flex; 
   flex-direction: column;
-  align-items: center; /* justify content for row*/
+  align-items: center; 
   float: right;
 }
 
@@ -412,4 +467,11 @@ form input[type="radio"] {
   border: 2px solid maroon;
   width: 100%;
   height: auto;
+}
+
+/* about table header styling */
+#about-table th {
+  font-weight: bold;
+  background-color: #bfbfbf;
+  padding: 10px;
 }
