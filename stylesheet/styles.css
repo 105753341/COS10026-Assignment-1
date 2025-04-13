@@ -435,10 +435,10 @@ form input[type="radio"] {
   background-color: #f0f0f0;
 }
 
-/* table cell styles (doesn't include header cells */
+/* table cell styles*/
 #about-table th, #about-table tr td {
   background-color: #f8f8f8;
-  padding: 0.5em 0.5em; /*em adapts from parent elements font size */
+  padding: 10px; /*em adapts from parent elements font size */
 }
 
 /*targets list elements inside table-body (applies to children)*/
@@ -462,6 +462,7 @@ form input[type="radio"] {
   /* align-items: flex-start; */
 }
 
+/* section style division styling */
 .about-section div {
   border: transparent solid 1px;
   border-radius: 8px;
@@ -477,7 +478,7 @@ form input[type="radio"] {
 #about-group-photo {
   display: flex; 
   flex-direction: column;
-  align-items: center; /* justify content for row*/
+  align-items: center; 
   float: right;
 }
 
@@ -486,4 +487,11 @@ form input[type="radio"] {
   border: 2px solid maroon;
   width: 100%;
   height: auto;
+}
+
+/* about table header styling */
+#about-table th {
+  font-weight: bold;
+  background-color: #bfbfbf;
+  padding: 10px;
 }
