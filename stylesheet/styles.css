@@ -471,6 +471,48 @@ form input[type="radio"] {
 /* about table header styling */
 #about-table th {
   font-weight: bold;
-  background-color: #bfbfbf;
+  background-color: #c9c9c9;
   padding: 10px;
+}
+
+#about-definition-list dt {
+  text-decoration: underline;
+  font-weight: bold;
+  margin-bottom: 5px; /* space below each term*/
+}
+
+#about-definition-list dd {
+  margin-bottom: 10px; /* space after each definition */
+}
+
+/* about section styles when width is not standard */
+@media only screen and (max-width: 800px) {
+  /* about section division styles (to avoid targetting h1/h2) */
+  .about-section div {
+    font-size: 14px;
+  }
+
+  /* about section division styles */
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    font-size: 14px;
+    align-items: center;
+  }
+
+  #about-aside, #about-group-photo {
+    float: none;
+    flex-direction: column;
+    display: flex;
+    max-width: 80%;
+    justify-content: center; 
+    align-items: center; 
+    font-size: 14px;
+  }
+
+  #about-group-photo {
+    height: auto;
+    max-width: 100%;
+  }
 }
