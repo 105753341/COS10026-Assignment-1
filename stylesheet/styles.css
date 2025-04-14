@@ -235,6 +235,10 @@ body {
   align-items: center;
   color: whitesmoke;
 }
+.footer-bottom-links {
+  display: flex;
+  gap: 30px; 
+}
 .webpages{
     color: whitesmoke;
     text-decoration: none;
@@ -243,11 +247,11 @@ body {
     text-decoration: underline;
 }
 /*link to jira in footer*/
-.jira_proj{
+.proj_links{
     color: whitesmoke;
     text-decoration: none;
 }
-.jira_proj:hover {
+.proj_links:hover {
     text-decoration: underline;
 }
 /* Media screens: tablets, small laptops */
