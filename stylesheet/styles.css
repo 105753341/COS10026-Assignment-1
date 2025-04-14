@@ -80,14 +80,14 @@ nav a:hover {
   transition: transform 0.5s ease
 }
 
-#about-company{
+.about-company{
   display: flex;
     align-items: flex-start;
     gap: 20px;
     padding: 20px;
 }
 
-#about-company {
+.about-company {
   border: transparent solid 1px;
   border-radius: 8px;
   font-size: small;
