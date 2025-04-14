@@ -1,3 +1,18 @@
+/*
+
+filename: styles.css
+
+authors: Alexander Giantsos, Jashandeep Kaur, Harri Strachan, Sathil Chathwara Weerakkodi
+
+created: 27/03/2025
+
+last modified: 14/04/2025
+
+description: styles sheet for nova tech website, styles for about.html, apply.html, index.html, jobs.html
+
+*/
+
+
 /* navigation menu styles*/
 nav {
   display: flex;
