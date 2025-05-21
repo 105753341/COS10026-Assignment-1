@@ -41,7 +41,7 @@
                 $username = mysqli_real_escape_string($conn, $_POST['username']);
                 $password = mysqli_real_escape_string($conn, $_POST['password']);
             
-                $query = "SELECT * FROM managers WHERE username = '$username'";
+                $query = "SELECT * FROM users WHERE username = '$username'";
                 $result = mysqli_query($conn, $query);
 
                 if ($result && mysqli_num_rows($result) > 0) {
