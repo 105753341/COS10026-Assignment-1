@@ -1,9 +1,8 @@
 <?php
 include("settings.php");
 $conn = mysqli_connect($host, $user, $pwd, $sql_db);
-
 if (!$conn) {
-    die("Database connection failed");
+    die("Database connection failed: " . mysqli_connect_error());
 }
 
 $query = "SELECT * FROM jobs";
@@ -13,9 +12,6 @@ $result = mysqli_query($conn, $query);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore job listings at TechNova. We're hiring Network Administrators and Cybersecurity Analysts.">
-    <meta name="keywords" content="TechNova, job listings, cybersecurity analyst, network administrator, careers, IT jobs">
     <title>Job Listings</title>
     <link rel="icon" type="image/png" href="images/faviconlogo.png">
     <link rel="stylesheet" href="stylesheet/styles.css">
@@ -31,7 +27,6 @@ $result = mysqli_query($conn, $query);
     </nav>
     <hr>
 </header>
-
 <main class="description">
     <div id="jobs-content">
         <section id="jobs">
@@ -57,7 +52,6 @@ $result = mysqli_query($conn, $query);
             }
             ?>
         </section>
-
         <aside>
             <h4>How to apply for a job?</h4>
             <ol>
@@ -69,7 +63,6 @@ $result = mysqli_query($conn, $query);
         </aside>
     </div>
 </main>
-
 <footer class="footer">
     <div class="footer-section">
         <h2>TechNova</h2>
