@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2025 at 09:44 AM
+-- Generation Time: May 21, 2025 at 01:09 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,8 +18,35 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `project2_jobs_db`
+-- Database: `job_database`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `eoi`
+--
+
+CREATE TABLE `eoi` (
+  `EOInumber` int(11) NOT NULL,
+  `job_ref` varchar(5) NOT NULL,
+  `first_name` varchar(20) NOT NULL,
+  `last_name` varchar(20) NOT NULL,
+  `dob` date NOT NULL,
+  `gender` varchar(6) NOT NULL,
+  `street_address` varchar(40) NOT NULL,
+  `suburb` varchar(40) NOT NULL,
+  `state` varchar(3) NOT NULL,
+  `postcode` varchar(4) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(12) NOT NULL,
+  `skill1` tinyint(1) DEFAULT 0,
+  `skill2` tinyint(1) DEFAULT 0,
+  `skill3` tinyint(1) DEFAULT 0,
+  `skill4` tinyint(1) DEFAULT 0,
+  `other_skills` text DEFAULT NULL,
+  `status` enum('New','Current','Final') DEFAULT 'New'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -65,6 +92,12 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indexes for table `eoi`
+--
+ALTER TABLE `eoi`
+  ADD PRIMARY KEY (`EOInumber`);
+
+--
 -- Indexes for table `jobs`
 --
 ALTER TABLE `jobs`
@@ -79,6 +112,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `eoi`
+--
+ALTER TABLE `eoi`
+  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `jobs`
