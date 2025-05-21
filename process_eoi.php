@@ -5,7 +5,7 @@ $user = "root";
 $pass = "";  // Set your password if needed
 $dbname = "job_application";
 
-$conn = new mysqli($host, $user, $pass, $dbname);
+$conn = new mysqli("localhost", "root", "", "job_database");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
