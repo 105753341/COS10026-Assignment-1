@@ -71,10 +71,10 @@ $result = mysqli_query($conn, $query);
     <div class="footer-section">
         <h3>Pages</h3>
         <ul>
-            <li><a href="index.php" class="webpages">Home</a></li>
+            <li><a href="index.html" class="webpages">Home</a></li>
             <li><a href="jobs.php" class="webpages">Jobs</a></li>
-            <li><a href="apply.php" class="webpages">Apply</a></li>
-            <li><a href="about.php" class="webpages">About us</a></li>
+            <li><a href="apply.html" class="webpages">Apply</a></li>
+            <li><a href="about.html" class="webpages">About us</a></li>
         </ul>
     </div>
     <div class="footer-section">
