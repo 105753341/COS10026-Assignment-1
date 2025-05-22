@@ -9,24 +9,7 @@
     <link rel="stylesheet" href="stylesheet/styles.css">
     
 </head>
-<body>
-    <h1>Manager LOGIN</h1>
 
-    <form method="post" action="login_manager.php">
-        
-        <label for="username">Username:</label>
-        <input type="text" name="username" required>
-        
-        <br>
-
-        <label for="password">Password:</label>
-        <input type="password" name="password" required>
-
-        <br>
-
-        <input type="hidden" name="token" value="manager">
-        <input type="submit" value="Login">
-    </form>
 
     <?php
         session_start();
@@ -62,5 +45,25 @@
             }
         }
     ?>
+
+    
+<body>
+    <h1>Manager LOGIN</h1>
+
+    <form method="post" action="login_manager.php">
+        
+        <label for="username">Username:</label>
+        <input type="text" name="username" required>
+        
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+
+        <br>
+
+        <input type="hidden" name="token" value="manager">
+        <input type="submit" value="Login">
+    </form>
 </body>
 </html>
