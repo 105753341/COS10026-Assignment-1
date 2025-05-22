@@ -2,5 +2,5 @@
 $host = "localhost";
 $user = "root";       
 $pwd = "";            
-$sql_db = "job_database"; 
+$sql_db = "project2_jobs_db"; 
 ?>

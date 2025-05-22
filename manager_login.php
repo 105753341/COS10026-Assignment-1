@@ -30,14 +30,11 @@
 
     <?php
         session_start();
-        // Requires a pre-existing database
-        require_once("settings.php");
-        // Open connection to database 
+        require_once("settings.php"); //opens the connection to the db
         $conn = mysqli_connect($host, $user, $pwd, $sql_db);
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if($conn) {
-                //Puts entered username and pwd into variables
                 $username = mysqli_real_escape_string($conn, $_POST['username']);
                 $password = mysqli_real_escape_string($conn, $_POST['password']);
             
@@ -52,7 +49,7 @@
                         $_SESSION['username'] = $username;
                         $_SESSION['password'] = $password;
 
-                        header("Location: manage.php"); //redirects to manager page (manage.php)
+                        header("Location: manage.php"); //redirects to managers page (manage.php)
                         exit();
                     }
                     else {
