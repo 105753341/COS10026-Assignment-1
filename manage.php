@@ -48,15 +48,13 @@
     </form>
 
     <?php
-    // Requires a pre-existing database
     require_once("settings.php");
-    // Open connection to database 
-    $conn = mysqli_connect($host, $user, $pwd, $sql_db);
+    $conn = mysqli_connect($host, $user, $pwd, $sql_db); //opens connection to db
 
     if ($conn) {
         $result = null;
 
-        if (isset($_POST['list_all'])) {         // If "List All" button is pressed, read all fields in EOI table
+        if (isset($_POST['list_all'])) {  // If "List All" button is pressed, read all fields in EOI table
 
             $query = "SELECT * FROM EOI";
             $result = mysqli_query($conn, $query);
@@ -74,7 +72,7 @@
             $query = "SELECT * FROM EOI WHERE first_name LIKE '%$first_name%' OR '%$last_name%'";
             $result = mysqli_query($conn, $query);
         }
-        // Deletes EOI according to entered job reference number
+        //all selected EOI deleted
         elseif (isset($_POST['delete_job_ref']) && !empty($_POST['delete_job_ref'])) {
             $delete_job_ref = mysqli_real_escape_string($conn, $_POST['delete_job_ref']);
             $query = "DELETE FROM EOI WHERE job_reference_number LIKE '%$delete_job_ref%'";
@@ -83,14 +81,12 @@
             if ($result) {
                 echo "<br>All EOI's with job reference number $delete_job_ref have been deleted. <br>";
 
-                // After deletion, selects all remaining records
                 $query = "SELECT * FROM EOI";
                 $result = mysqli_query($conn, $query);
             } else {
                 echo "Error deleting EOI." . mysqli_error($conn);
             }
         }
-        // Updates status of EOI according to entered job reference number
         elseif (isset($_POST['update_job_ref']) && !empty($_POST['update_job_ref']) && isset($_POST['statuss']) && !empty($_POST['statuss'])) {
             $update_job_ref = mysqli_real_escape_string($conn, $_POST['update_job_ref']);
             $status = mysqli_real_escape_string($conn, $_POST['statuss']);
@@ -100,7 +96,6 @@
             if ($result) {
                 echo "<br>Status updated for EOI number: $update_job_ref. <br> ";
 
-                // After the update, selects the updated record
                 $query = "SELECT * FROM EOI WHERE eoi_number = '$update_job_ref'";
                 $result = mysqli_query($conn, $query);
             } else {
@@ -108,8 +103,6 @@
             }
         }
 
-
-        // Creates table if result returns "1"
         if ($result && mysqli_num_rows($result) > 0) {
             echo "<br><table border='1'>
                     <thead>

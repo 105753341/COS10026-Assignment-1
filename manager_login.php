@@ -50,7 +50,7 @@
                         $_SESSION['password'] = $password;
 
                         header("Location: manage.php"); //redirects to managers page (manage.php)
-                        exit();
+                        die();
                     }
                     else {
                         echo "<p>Invalid username or password.</p>"; 
