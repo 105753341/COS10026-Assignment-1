@@ -9,35 +9,15 @@
     <link rel="stylesheet" href="stylesheet/styles.css">
     
 </head>
-<body>
-    <h1>Manager LOGIN</h1>
 
-    <form method="post" action="login_manager.php">
-        
-        <label for="username">Username:</label>
-        <input type="text" name="username" required>
-        
-        <br>
-
-        <label for="password">Password:</label>
-        <input type="password" name="password" required>
-
-        <br>
-
-        <input type="hidden" name="token" value="manager">
-        <input type="submit" value="Login">
-    </form>
 
     <?php
         session_start();
-        // Requires a pre-existing database
-        require_once("settings.php");
-        // Open connection to database 
+        require_once("settings.php"); //opens the connection to the db
         $conn = mysqli_connect($host, $user, $pwd, $sql_db);
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if($conn) {
-                //Puts entered username and pwd into variables
                 $username = mysqli_real_escape_string($conn, $_POST['username']);
                 $password = mysqli_real_escape_string($conn, $_POST['password']);
             
@@ -52,8 +32,8 @@
                         $_SESSION['username'] = $username;
                         $_SESSION['password'] = $password;
 
-                        header("Location: manage.php"); //redirects to manager page (manage.php)
-                        exit();
+                        header("Location:manage.php"); //redirects to managers page (manage.php)
+                        die();
                     }
                     else {
                         echo "<p>Invalid username or password.</p>"; 
@@ -65,5 +45,25 @@
             }
         }
     ?>
+
+    
+<body>
+    <h1>Manager LOGIN</h1>
+
+    <form method="post" action="manage.php">
+        
+        <label for="username">Username:</label>
+        <input type="text" name="username" required>
+        
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+
+        <br>
+
+        <input type="hidden" name="token" value="manager">
+        <input type="submit" value="Login">
+    </form>
 </body>
 </html>
