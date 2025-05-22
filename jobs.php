@@ -1,8 +1,8 @@
 <?php
-include("settings.php");
+include("settings.php"); // includes the database file from the setting.php
 $conn = mysqli_connect($host, $user, $pwd, $sql_db);
 if (!$conn) {
-    die("Database connection failed: " . mysqli_connect_error());
+    die("Database connection failed: " . mysqli_connect_error()); // checks if connection fails
 }
 
 $query = "SELECT * FROM jobs";
@@ -23,7 +23,7 @@ $result = mysqli_query($conn, $query);
         <section id="jobs">
             <h2 class="hiring"><a href="#target-section" id="scroll-link">We're Hiring!</a></h2>
             <?php
-            if ($result && mysqli_num_rows($result) > 0) {
+            if ($result && mysqli_num_rows($result) > 0) {  // sends the query to the databse
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '<article id="target-section">';
                     echo "<h2 class='main-heads'>" . htmlspecialchars($row['title']) . "</h2>";
@@ -58,5 +58,5 @@ $result = mysqli_query($conn, $query);
 </body>
 </html>
 <?php
-mysqli_close($conn);
+mysqli_close($conn); // closes database connection
 ?>
