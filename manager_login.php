@@ -32,7 +32,7 @@
                         $_SESSION['username'] = $username;
                         $_SESSION['password'] = $password;
 
-                        header("Location: manage.php"); //redirects to managers page (manage.php)
+                        header("Location:manage.php"); //redirects to managers page (manage.php)
                         die();
                     }
                     else {
