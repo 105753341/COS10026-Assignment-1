@@ -50,7 +50,7 @@
 <body>
     <h1>Manager LOGIN</h1>
 
-    <form method="post" action="login_manager.php">
+    <form method="post" action="manage.php">
         
         <label for="username">Username:</label>
         <input type="text" name="username" required>
