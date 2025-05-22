@@ -48,7 +48,11 @@
 
     
 <body>
+
+    <?php include 'header.inc';?>
+
     <h1>Manager LOGIN</h1>
+    <hr>
 
     <form method="post" action="manage.php">
         
@@ -65,5 +69,7 @@
         <input type="hidden" name="token" value="manager">
         <input type="submit" value="Login">
     </form>
+
+    <?php include 'footer.inc';?>
 </body>
 </html>

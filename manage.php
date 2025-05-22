@@ -12,7 +12,10 @@
 </head>
  
 <body>
+    <?php include 'header.inc';?>
+
     <h1>Manage EOIs</h1>
+    <hr>
 
     <form method="POST" action="manage.php">
         <h2>List EOIs</h2>
@@ -153,6 +156,8 @@
         echo "<p>Unable to connect to the database..</p>";  //prints this if can't connect to db
     }
     ?>
+
+<?php include 'footer.inc';?>
 
 </body>
 
