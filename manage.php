@@ -131,8 +131,8 @@
                             <th>Other Skills</th>
                             <th>Status</th>
                         </tr>";
-            //Fetches results from SQL database and prints to table
-            while ($row = mysqli_fetch_assoc($result)) {
+
+                while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>
                             <td>" . $row["eoi_number"] . "</td>
                             <td>" . $row["job_reference_number"] . "</td>
@@ -153,12 +153,11 @@
             echo "</table>";
         }
 
-        //Connection to database closed
-        mysqli_close($conn);
+        mysqli_close($conn); //closes database connection
     }
-    //If unable to connect to database
+
     else {
-        echo "<p>Unable to connect to the database..</p>";
+        echo "<p>Unable to connect to the database..</p>";  //prints this if can't connect to db
     }
     ?>
 
