@@ -11,23 +11,15 @@
     <link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
 </head>
 <body>
-<header>
-    <a href="index.html"> <img src="images/logo_cropped.png" alt="Company Logo"></a>
-    
-    <nav>
-        <a href="index.html">Home Page</a> 
-        <a href="jobs.html">Jobs Description</a> 
-        <a href="about.html">Group Details</a> 
-        <a href="mailto:info@technova.com.au">&#128231;</a>
-     </nav>
-     <hr>
+    <?php include 'header.inc';?>
+
     <h1>Welcome to TechNova Job Application</h1>
     <hr>
-</header>
+
 <main>
     <section>
         <h2>Job Application Form</h2>
-        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST">
+        <form action="process_eoi.php" method="POST">
             <label for="jobRef">Job Reference Number:</label>
             <select id="jobRef" name="jobRef" required>
                 <option value="" disabled selected>Select a job reference</option>
@@ -110,36 +102,6 @@
     </section>
 </main>
 
-<footer class="footer">
-    <div class="footer-section">
-        <h2>TechNova</h2>
-        <p>TechNova Solutions offers innovative IT services since 2004 and seeks passionate talent to join its growth-focused team.</p>
-    </div>
-    <div class="footer-section">
-        <h3>Pages</h3>
-        <ul>
-            <li><a href="index.html" class="webpages">Home</a></li>
-            <li><a href="jobs.html" class="webpages">Jobs</a></li>
-            <li><a href="apply.html" class="webpages">Apply</a></li>
-            <li><a href="about.html" class="webpages">About us</a></li>
-        </ul>
-    </div>
-    <div class="footer-section">
-        <h3>Developers</h3>
-        <ul>
-            <li>Alexander</li>
-            <li>Jashandeep</li>
-            <li>Harri</li>
-            <li>Sathil</li>
-        </ul>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy;<span id="year"></span> TechNova All Rights Reserved</p>
-        <div class="footer-bottom-links">
-            <p><a href="https://github.com/105753341/COS10026-Assignment-1" class="proj_links" target="_blank">Github</a></p>
-            <p><a href="https://cos10026-web-project.atlassian.net/jira/software/projects/T2WPA/boards/3?atlOrigin=eyJpIjoiNTgyNzczZjE5NzBmNDIxMDk1NmQ1MDI5MzRlMDE5NWMiLCJwIjoiaiJ9" class="proj_links" target="_blank">Jira</a></p>
-        </div>
-    </div>
-</footer>
+<?php include 'footer.inc';?>
 </body>
 </html>

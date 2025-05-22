@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A web page to view general info about our group">
-    <meta name="keywords" content="TechNova, about us, team, student group, developer roles, members, contributions">
+    <meta name="keywords" content="TechNova, about us, team, student group, developer roles, members, contributions, html5, php">
     <meta name="author" content="Alexander">
     <title>About us</title>
     <link rel="icon" type="image/png" href="images/faviconlogo.png">
@@ -12,16 +12,7 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html"> <img src="images/logo_cropped.png" alt="Company Logo"></a>
-        <nav>
-            <a href="index.html">Home Page</a> 
-            <a href="jobs.html">Job Descriptions</a> 
-            <a href="apply.html">Application Page</a>
-            <a href="mailto:info@technova.com.au">&#128231;</a> 
-         </nav>
-         <hr>
-    </header>
+    <?php include 'header.inc';?>
 
     <!-- Show's page name -->
     <h1 class="main-heads">About us</h1>
@@ -79,6 +70,10 @@
                         <li>Responsible for submitting deliverables (assignment etc.)</li> 
                         <li>Responsible for developing the about.html</li>
                         <li>Shared responsibility: CSS file, jira</li>
+                        <li>Responsible for using PHP to modularise common sections (footer/header)</li>
+                        <li>Mainting the settings.php file</li>
+                        <li>Updating the about.php page</li>
+                        <li>Providing various enhancements/QOL features (TBD)</li>
                     </ul>
                 </dd>
                 <dt>Jashandeep</dt>
@@ -86,6 +81,7 @@
                     <ul>
                         <li>Responsible for developing the jobs.html page</li> 
                         <li>Shared responsibility: CSS file, jira</li>
+                        <li>Responsible for jobs table in the MYSQL database</li>
                     </ul>
                 </dd>
                 <dt>Harri</dt>
@@ -94,6 +90,7 @@
                         <li>Responsible for asking questions on behalf of the group of Canvas</li> 
                         <li>Responsible for developing the index.html</li>
                         <li>Shared responsibility: CSS file, jira</li>
+                        <li>Responsible for developing manage.php page</li>
                     </ul>
                 </dd>
                 <dt>Sathil</dt>
@@ -101,6 +98,8 @@
                     <ul>
                         <li>Responsible for developing apply.html page</li> 
                         <li>Shared responsibility: CSS file, jira</li>
+                        <li>Responsible for creating the eoi table in the MYSQL database</li>
+                        <li>Responsible for developing processing_eoi.php, which takes input from the apply pages and adds an EOI record to the table</li>
                     </ul>
                 </dd>
             </dl>
@@ -212,36 +211,6 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-section">
-            <h2>TechNova</h2>
-            <p>TechNova Solutions offers innovative IT services since 2004 and seeks passionate talent to join its growth-focused team.</p>
-        </div>
-        <div class="footer-section">
-            <h3>Pages</h3>
-            <ul>
-                <li><a href="index.html" class="webpages">Home</a></li>
-                <li><a href="jobs.html" class="webpages">Jobs</a></li>
-                <li><a href="apply.html" class="webpages">Apply</a></li>
-                <li><a href="about.html" class="webpages">About us</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Developers</h3>
-            <ul>
-                <li>Alexander</li>
-                <li>Jashandeep</li>
-                <li>Harri</li>
-                <li>Sathil</li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy;2025 TechNova All Rights Reserved</p>
-            <div class="footer-bottom-links">
-                <p><a href="https://github.com/105753341/COS10026-Assignment-1" class="proj_links" target="_blank">Github</a></p>
-                <p><a href="https://cos10026-web-project.atlassian.net/jira/software/projects/T2WPA/boards/3?atlOrigin=eyJpIjoiNTgyNzczZjE5NzBmNDIxMDk1NmQ1MDI5MzRlMDE5NWMiLCJwIjoiaiJ9" class="proj_links" target="_blank">Jira</a></p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.inc';?>
 </body>
 </html>
