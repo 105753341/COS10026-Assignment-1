@@ -30,7 +30,7 @@
 
                     if($username == $row['username'] && $password == $row['password']) {
                         $_SESSION['username'] = $username;
-                        $_SESSION['password'] = $password;
+                        $_SESSION['password'] = $password; //compares input to db
 
                         header("Location:manage.php"); //redirects to managers page (manage.php)
                         die();
