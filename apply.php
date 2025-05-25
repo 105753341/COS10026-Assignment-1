@@ -19,7 +19,7 @@
   <main>
     <section>
       <h2>Job Application Form</h2>
-      <form action="process_eoi.php" method="POST">
+      <form action="process_eoi.php" method="POST" novalidate="novalidate">
         <label for="jobRef">Job Reference Number:</label>
         <select id="jobRef" name="jobRef" required>
           <option value="" disabled selected>Select a job reference</option>
@@ -28,10 +28,10 @@
         </select><br />
 
         <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required maxlength="20" pattern="[A-Za-z]+" title="Only letters are allowed" /><br />
+        <input type="text" id="firstName" name="firstName" maxlength="20" pattern="[A-Za-z]+" required title="Only letters are allowed" /><br />
 
         <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required maxlength="20" pattern="[A-Za-z]+" title="Only letters are allowed" /><br />
+        <input type="text" id="lastName" name="lastName" maxlength="20" pattern="[A-Za-z]+" required title="Only letters are allowed" /><br />
 
         <label for="dob">Date of Birth:</label>
         <input type="text" id="dob" name="dob" required placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" title="Format: dd/mm/yyyy" /><br />
@@ -45,10 +45,10 @@
         </fieldset><br />
 
         <label for="address">Street Address:</label>
-        <input type="text" id="address" name="address" required maxlength="40" /><br />
+        <input type="text" id="address" name="address" maxlength="40" required /><br />
 
         <label for="suburb">Suburb/Town:</label>
-        <input type="text" id="suburb" name="suburb" required maxlength="40" /><br />
+        <input type="text" id="suburb" name="suburb" maxlength="40" required /><br />
 
         <label for="state">State:</label>
         <select id="state" name="state" required>
@@ -64,13 +64,13 @@
         </select><br />
 
         <label for="postcode">Postcode:</label>
-        <input type="text" id="postcode" name="postcode" required maxlength="4" pattern="\d{4}" title="Enter a 4-digit postcode" /><br />
+        <input type="text" id="postcode" name="postcode" maxlength="4" pattern="\d{4}" title="Enter a 4-digit postcode" required /><br />
 
         <label for="email">Email Address:</label>
         <input type="email" id="email" name="email" required /><br />
 
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required pattern="\d{8,12}" title="Phone number must be 8 to 12 digits" /><br />
+        <input type="tel" id="phone" name="phone" pattern="\d{8,12}" title="Phone number must be 8 to 12 digits" required /><br />
 
         <fieldset>
           <legend>Skills:</legend>
