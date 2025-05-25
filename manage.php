@@ -62,6 +62,7 @@
             $query = "SELECT * FROM EOI";
             $result = mysqli_query($conn, $query);
         }
+                        
         // Lists EOI according to entered job reference number
         elseif (isset($_POST['job_ref']) && !empty($_POST['job_ref'])) {
             $job_ref = mysqli_real_escape_string($conn, $_POST['job_ref']);
