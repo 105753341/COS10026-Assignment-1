@@ -65,7 +65,7 @@ nav a:hover {
   text-align: center;
   background-color: maroon;
   color: #f0f0f0;
-  font: normal 1rem Arial, Helvetica, sans-serif; /* shorthand */
+  font-family: Arial, Helvetica, sans-serif; /* shorthand */
   width: 80%;
   border: transparent solid 1px;
   border-radius: 8px;
