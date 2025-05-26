@@ -29,7 +29,7 @@
                     <li>Reduce image sizes to less than 300kb to improve peformance</li>
                     <!-- safetly display the <, >, and " chars -->
                     <li>Should use &lt;input type=&quot;date&quot;&gt; on the apply page</li> 
-                    <li>???Update checkbox naming so that all selections are captured</li>
+                    <li>Update checkbox naming so that all selections are captured</li>
                     <li>Use shorthand font property</li>
                 </ul>
             </div>

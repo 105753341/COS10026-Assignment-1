@@ -6,10 +6,12 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Header">
-    <meta name="keywords" content="HTML5, PHP">
+    <meta name="description" content="A page for people to login to the manage.php page">
+    <meta name="keywords" content="HTML5, PHP, login, managment">
     <meta name="author" content="Harrison Strachan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager login - TechNova</title>
+    <link rel="icon" type="image/png" href="images/faviconlogo.png">
     <link rel="stylesheet" href="stylesheet/styles.css">
     
 </head>    

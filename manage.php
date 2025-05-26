@@ -11,10 +11,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Header">
-    <meta name="keywords" content="HTML5, PHP">
+    <meta name="description" content="managment page for HR deperartment to view EOI and other various functions">
+    <meta name="keywords" content="HTML5, PHP, management">
     <meta name="author" content="Harrison Strachan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage - TechNova</title>
+    <link rel="icon" type="image/png" href="images/faviconlogo.png">
     <link rel="stylesheet" href="stylesheet/styles.css">
 </head>
  
