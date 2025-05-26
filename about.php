@@ -74,7 +74,7 @@
                         <li>Maintaining the settings.php file</li>
                         <li>Updating the about.php page</li>
                         <li>Adding improvements to manage.php/manager_login.php</li>
-                        <li>Providing various enhancements/QOL features (session managment, manager signup)</li>
+                        <li>Providing various enhancements/QOL features (session managment, manager signup, password hashing support)</li>
                     </ul>
                 </dd>
                 <dt>Jashandeep</dt>
