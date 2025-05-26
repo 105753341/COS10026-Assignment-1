@@ -18,12 +18,10 @@
 
     <!-- inherited styles from about page, since style of this page is very similar, no need to write new css -->
     <main id="about-main">
-    <!-- Generic "who we are" section, not required -->
     <section class="about-section">
             <h2>Implemented suggested changes</h2>
-            <!-- The following was generated using copilot AI for a generic "who we are", the prompt was: "create a generic "about us" section for a company called "tech nova"" -->
             <div>
-                <ul id="improvements">
+                <ul class="improvements">
                     <li>Increase whitespace / break up text in the index and jobs pages</li>
                     <li>Meta description/keywords for each page</li>
                     <li>Reduce image sizes to less than 300kb to improve peformance</li>
@@ -33,6 +31,15 @@
                     <li>Use shorthand font property</li>
                 </ul>
             </div>
+    </section>
+
+    <section class="about-section">
+        <h2>Enhancements implemented</h2>
+        <div>
+            <ul class="improvements">
+                <li>Control access to manage.php by checking username and password - done, compares credentials to database, creates session, with ability to destroy on logout</li>
+            </ul>
+        </div>
     </section>
     </main>
 
