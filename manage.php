@@ -1,6 +1,7 @@
 <?php 
     session_start();
-    if (!isset($_SESSION['username'])) { //if username isnt set, return
+    if (!isset($_SESSION['username'])) { //if username isnt set, return with error
+        $_SESSION['error'] = "Please login first before trying to access the manage page.";
         header("Location: manager_login.php");
         exit();
     }
