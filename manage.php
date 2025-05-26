@@ -153,6 +153,11 @@
                             <th>Postcode</th>
                             <th>Email</th>
                             <th>Phone</th>
+                            <th>HTML</th>
+                            <th>CSS</th>
+                            <th>JS</th>
+                            <th>Python</th>
+                            <th>SQL</th>
                             <th>Other Skills</th>
                             <th>Status</th>
                         </tr>";
