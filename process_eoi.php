@@ -4,11 +4,8 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
     exit();
 }
 
-// Connection details
-$host = "localhost";
-$user = "root";
-$pwd = "";
-$sql_db = "project2_jobs_db";
+// Use settings.php for DB connection details
+require_once("settings.php"); //opens the connection to the db
 
 // Connect to DB
 $conn = new mysqli($host, $user, $pwd, $sql_db);
