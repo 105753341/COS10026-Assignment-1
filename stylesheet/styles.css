@@ -526,4 +526,11 @@ header img {
   justify-content: space-between;
   align-items: center;
 }
-  
+
+/* manager table styles */
+#manager-table {
+  margin: 0 auto;  /* top/bottom: 0px, left/right: auto */
+  background-color: #f8f8f8;
+  padding: 10px;
+  list-style-type: circle;
+}
