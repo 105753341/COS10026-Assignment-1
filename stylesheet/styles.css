@@ -559,3 +559,15 @@ header img {
   left: 0;
   padding-right: 0.3em;
 }
+
+/* manager table styles */
+#manager-table {
+  margin: 0 auto;  /* top/bottom: 0px, left/right: auto */
+  background-color: #f8f8f8;
+  padding: 10px;
+  list-style-type: circle;
+  border: 1px solid;
+  border-color: black;
+  text-align: center;
+  border-collapse: collapse;
+}
