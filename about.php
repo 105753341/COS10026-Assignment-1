@@ -68,7 +68,7 @@
                 <dd>
                     <ul>
                         <li>Responsible for submitting deliverables (assignment etc.)</li> 
-                        <li>Responsible for developing the about.html</li>
+                        <li>Responsible for developing the about.php</li>
                         <li>Shared responsibility: CSS file, jira</li>
                         <li>Responsible for using PHP to modularise common sections (footer/header)</li>
                         <li>Mainting the settings.php file</li>
@@ -79,7 +79,7 @@
                 <dt>Jashandeep</dt>
                 <dd>
                     <ul>
-                        <li>Responsible for developing the jobs.html page</li> 
+                        <li>Responsible for developing the jobs.php page</li> 
                         <li>Shared responsibility: CSS file, jira</li>
                         <li>Responsible for jobs table in the MYSQL database</li>
                     </ul>
@@ -88,7 +88,7 @@
                 <dd>
                     <ul>
                         <li>Responsible for asking questions on behalf of the group of Canvas</li> 
-                        <li>Responsible for developing the index.html</li>
+                        <li>Responsible for developing the index.php</li>
                         <li>Shared responsibility: CSS file, jira</li>
                         <li>Responsible for developing manage.php page</li>
                     </ul>
@@ -96,7 +96,7 @@
                 <dt>Sathil</dt>
                 <dd>
                     <ul>
-                        <li>Responsible for developing apply.html page</li> 
+                        <li>Responsible for developing apply.php page</li> 
                         <li>Shared responsibility: CSS file, jira</li>
                         <li>Responsible for creating the eoi table in the MYSQL database</li>
                         <li>Responsible for developing processing_eoi.php, which takes input from the apply pages and adds an EOI record to the table</li>

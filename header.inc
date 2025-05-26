@@ -1,5 +1,5 @@
 <header>
-    <a href="index.html"> <img src="images/logo_cropped.png" alt="Company Logo"></a>
+    <a href="index.php"><img src="images/logo_cropped.png" alt="Company Logo"></a>
     <nav>
         <a href="index.php">Home Page</a> 
         <a href="jobs.php">Job Descriptions</a> 

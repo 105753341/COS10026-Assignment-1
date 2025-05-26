@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
-    header("Location: apply.html");
+    header("Location: apply.php");
     exit();
 }
 
@@ -96,7 +96,7 @@ if (!preg_match($state_postcode_rules[$state], $postcode)) {
 if (!empty($errors)) {
     echo "<h1>Submission Failed</h1><ul>";
     foreach ($errors as $err) echo "<li>$err</li>";
-    echo "</ul><a href='apply.html'>Go back</a>";
+    echo "</ul><a href='apply.php'>Go back</a>";
     exit();
 }
 
