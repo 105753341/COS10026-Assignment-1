@@ -15,7 +15,7 @@
     <meta name="keywords" content="HTML5, PHP">
     <meta name="author" content="Harrison Strachan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet/styles.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
 </head>
  
 <body>
@@ -131,7 +131,9 @@
         }
 
         if ($result && mysqli_num_rows($result) > 0) {
-            echo "<br><table border='1'>
+            echo "<br>
+            <div>
+            <table id='manager-table' >
                     <thead>
                     <tr><th>EOI</th></tr>
                     </thead>
