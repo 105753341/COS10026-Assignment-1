@@ -71,7 +71,7 @@
                         <li>Responsible for developing the about.php</li>
                         <li>Shared responsibility: CSS file, jira</li>
                         <li>Responsible for using PHP to modularise common sections (footer/header)</li>
-                        <li>Mainting the settings.php file</li>
+                        <li>Maintaining the settings.php file</li>
                         <li>Updating the about.php page</li>
                         <li>Providing various enhancements/QOL features (TBD)</li>
                     </ul>

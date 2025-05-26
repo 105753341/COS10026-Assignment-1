@@ -25,18 +25,19 @@
         <nav>
             <a href="index.php">Home Page</a> 
             <a href="jobs.php">Job Descriptions</a> 
-            <a href="manager_login.php">Management</a>
             <a href="apply.php">Application Page</a>
+            <a href="manager_login.php">Management</a>
+            <a href="enhancements.php">Enhancements</a>
             <a href="about.php">Group details</a>
             <a href="mailto:info@technova.com.au">&#128231;</a> 
             </nav>
     </header>
     <section class="login-section">
-        <h1> Welcome <em><?php echo htmlspecialchars($_SESSION['username']); ?></em></h1>
+        <h1>Welcome <u><em><?php echo htmlspecialchars($_SESSION['username']); ?></em></u></h1>
         <a href="process_logout.php" class="btn">Logout</a>
     </section>
     <hr>
-    <h1>Manage EOIs</h1>
+    <h1 class="main-heads">Manage EOIs</h1>
     <hr>
 
     <form method="POST" action="manage.php">
