@@ -17,19 +17,20 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="A page for managers to create other managers">
-    <meta name="keywords" content="HTML5, PHP, signup, managment">
-    <meta name="author" content="Alexander Giantsos">
+    <meta name="description" content="managment page for HR deperartment to view EOI and other various functions">
+    <meta name="keywords" content="HTML5, PHP, management">
+    <meta name="author" content="Harrison Strachan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manager Sign Up - TechNova</title>
+    <title>Manage - TechNova</title>
     <link rel="icon" type="image/png" href="images/faviconlogo.png">
     <link rel="stylesheet" href="stylesheet/styles.css">
-    
-</head>    
+    <link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
+</head>
+
 <body>
+    <?php include 'header_manager.inc';?>
 
-    <?php include 'header.inc';?>
-
+    <hr>
     <h1 class="main-heads">Manager Sign Up</h1>
     <hr>
 

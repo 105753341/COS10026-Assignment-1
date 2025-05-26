@@ -23,23 +23,7 @@
 </head>
  
 <body>
-    <!-- not modularised header here since we want to remove the linebreak -->
-    <header>
-        <a href="index.php"><img src="images/logo_cropped.png" alt="Company Logo"></a>
-        <nav>
-            <a href="index.php">Home Page</a> 
-            <a href="jobs.php">Job Descriptions</a> 
-            <a href="apply.php">Application Page</a>
-            <a href="manager_login.php">Management</a>
-            <a href="enhancements.php">Enhancements</a>
-            <a href="about.php">Group details</a>
-            <a href="mailto:info@technova.com.au">&#128231;</a> 
-            </nav>
-    </header>
-    <section class="login-section">
-        <h1>Welcome <u><em><?php echo htmlspecialchars($_SESSION['username']); ?></em></u></h1>
-        <a href="process_logout.php" class="btn">Logout</a>
-    </section>
+    <?php include 'header_manager.inc';?>
     <hr>
     <h1 class="main-heads">Manage EOIs</h1>
     <hr>
