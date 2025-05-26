@@ -73,13 +73,13 @@
         elseif (isset($_POST['first_name']) && !empty($_POST['first_name']) || isset($_POST['last_name']) && !empty($_POST['last_name'])) {
             $first_name = mysqli_real_escape_string($conn, $_POST['first_name']);
             $last_name = mysqli_real_escape_string($conn, $_POST['last_name']);
-            $query = "SELECT * FROM eoi WHERE first_name LIKE '%$first_name%' OR '%$last_name%'";
+            $query = "SELECT * FROM eoi WHERE first_name LIKE '%$first_name%' OR last_name LIKE '%$last_name%'";
             $result = mysqli_query($conn, $query);
         }
         //all selected EOI deleted
         elseif (isset($_POST['delete_job_ref']) && !empty($_POST['delete_job_ref'])) {
             $delete_job_ref = mysqli_real_escape_string($conn, $_POST['delete_job_ref']);
-            $query = "DELETE FROM eoi WHERE job_reference_number LIKE '%$delete_job_ref%'";
+            $query = "DELETE FROM eoi WHERE job_ref_number LIKE '%$delete_job_ref%'";
             $result = mysqli_query($conn, $query);
 
             if ($result) {
