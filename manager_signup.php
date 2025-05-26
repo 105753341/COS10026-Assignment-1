@@ -1,0 +1,57 @@
+<?php 
+    session_start();
+    if (!isset($_SESSION['username'])) { //if username isnt set, return with error
+        $_SESSION['error'] = "Please login first before trying to access the manage pages.";
+        header("Location: manager_login.php");
+        exit();
+    }
+
+    // grab error message from session (if any)
+    $error = $_SESSION['error'] ?? "When signing up, please make sure both the username is unique, as well as the password containing a minumum of 8 charecters, a number and a special char."; 
+    //shorthand conditional, if set and not null, assign session error to local error var
+    //otherwise display generic message about unique username and password following rules
+    unset($_SESSION['error']); // clear error after storing it
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="A page for managers to create other managers">
+    <meta name="keywords" content="HTML5, PHP, signup, managment">
+    <meta name="author" content="Alexander Giantsos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Sign Up - TechNova</title>
+    <link rel="icon" type="image/png" href="images/faviconlogo.png">
+    <link rel="stylesheet" href="stylesheet/styles.css">
+    
+</head>    
+<body>
+
+    <?php include 'header.inc';?>
+
+    <h1 class="main-heads">Manager Sign Up</h1>
+    <hr>
+
+    <form method="post" action="process_signup.php">
+        
+        <label for="username">Username:</label>
+        <input type="text" name="username" required>
+        
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+
+        <!-- show label error if has contents, will be empty if no error, and thus not shown. html special char for security -->
+        <label>
+            <?php if (isset($error)) echo htmlspecialchars($error); ?>
+        </label>
+        <br>
+        <input type="hidden" name="token" value="manager">
+        <input type="submit" value="Sign up">
+    </form>
+
+    <?php include 'footer.inc';?>
+</body>
+</html>

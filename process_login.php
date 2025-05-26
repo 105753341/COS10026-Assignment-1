@@ -10,7 +10,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $username = trim(mysqli_real_escape_string($conn, $_POST['username']));
-            $password = trim(mysqli_real_escape_string($conn, $_POST['password']));
+            $password = mysqli_real_escape_string($conn, $_POST['password']); //do not trim space in passwords, some people might have!
         
             $query = "SELECT * FROM users WHERE username = '$username'";
             $result = mysqli_query($conn, $query);

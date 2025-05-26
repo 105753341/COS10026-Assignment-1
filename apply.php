@@ -13,12 +13,12 @@
 
   <?php include 'header.inc'; ?>
 
-  <h1>Welcome to TechNova Job Application</h1>
+  <h1 class="main-heads">Welcome to TechNova Job Application</h1>
   <hr />
 
   <main>
     <section>
-      <h2>Job Application Form</h2>
+      <h2 class="main-heads">Job Application Form</h2>
       <form action="process_eoi.php" method="POST" novalidate="novalidate">
         <label for="jobRef">Job Reference Number:</label>
         <select id="jobRef" name="jobRef" required>
