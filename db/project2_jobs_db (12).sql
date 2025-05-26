@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2025 at 02:17 PM
+-- Generation Time: May 26, 2025 at 02:22 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -54,7 +54,7 @@ CREATE TABLE `eoi` (
 --
 
 INSERT INTO `eoi` (`EOInumber`, `job_ref_number`, `first_name`, `last_name`, `dob`, `gender`, `street_address`, `suburb`, `state`, `postcode`, `email`, `phone`, `skill_html`, `skill_css`, `skill_js`, `skill_python`, `skill_sql`, `other_skills`, `status`) VALUES
-(0, 'NET17', 'Jaimee', 'Strachan', '2001-08-31', b'11', '5 scenic crescent', 'Kalorama', 'VIC', '3766', 'strawnie3766@gmail.com', '0476162247', 0, 0, 0, 0, 0, 'N/A', 'New');
+(1, 'NET17', 'Jaimee', 'Strachan', '2001-08-31', b'11', '5 scenic crescent', 'Kalorama', 'VIC', '3766', 'strawnie3766@gmail.com', '0476162247', 0, 0, 0, 0, 0, 'N/A', 'New');
 
 -- --------------------------------------------------------
 
@@ -107,6 +107,12 @@ INSERT INTO `users` (`user_id`, `username`, `password`) VALUES
 --
 
 --
+-- Indexes for table `eoi`
+--
+ALTER TABLE `eoi`
+  ADD PRIMARY KEY (`EOInumber`);
+
+--
 -- Indexes for table `jobs`
 --
 ALTER TABLE `jobs`
@@ -121,6 +127,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `eoi`
+--
+ALTER TABLE `eoi`
+  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `jobs`
