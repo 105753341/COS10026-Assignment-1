@@ -2,6 +2,7 @@
     session_start();
     require_once("settings.php"); //opens the connection to the db
     $conn = mysqli_connect($host, $user, $pwd, $sql_db);
+    $_SESSION['error'] = null;
 
     if (!$conn) {
         die("Database connection failed: " .mysqli_connect_error()); //if connection failed print generic error + error returned
@@ -21,6 +22,7 @@
                 if($username == $row['username'] && $password == $row['password']) {
                     $_SESSION['username'] = $username;
                     $_SESSION['password'] = $password; //compares input to db
+                    $_SESSION['error'] = null;
 
                     header("Location:manage.php"); //redirects to managers page (manage.php)
                     exit;

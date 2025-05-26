@@ -1,5 +1,16 @@
 <?php
     session_start();
+
+    // If user is already logged in, redirect to manage page
+    if (isset($_SESSION['username'])) {
+        header("Location: manage.php");
+        exit();
+    }
+
+    // grab error message from session (if any)
+    $error = $_SESSION['error'] ?? ''; //shorthand conditional, if set and not null, assign session error to local error var
+    //otherwise empty string (we want the empty string so when we store local $error in label, if there's nothing in the var nothing will be shown)
+    unset($_SESSION['error']); // clear error after storing it
 ?>
 
 <!DOCTYPE html>
@@ -32,8 +43,11 @@
         <label for="password">Password:</label>
         <input type="password" name="password" required>
 
+        <!-- show label error if has contents, will be empty if no error, and thus not shown. html special char for security -->
+        <label>
+            <?php if (isset($error)) echo htmlspecialchars($error); ?>
+        </label>
         <br>
-
         <input type="hidden" name="token" value="manager">
         <input type="submit" value="Login">
     </form>
