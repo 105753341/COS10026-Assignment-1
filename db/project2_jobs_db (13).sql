@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2025 at 02:22 PM
+-- Generation Time: May 26, 2025 at 02:51 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -33,7 +33,7 @@ CREATE TABLE `eoi` (
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `dob` varchar(15) NOT NULL,
-  `gender` bit(2) NOT NULL,
+  `gender` enum('Male','Female','Other') NOT NULL,
   `street_address` varchar(100) NOT NULL,
   `suburb` varchar(50) NOT NULL,
   `state` varchar(3) NOT NULL,
@@ -54,7 +54,9 @@ CREATE TABLE `eoi` (
 --
 
 INSERT INTO `eoi` (`EOInumber`, `job_ref_number`, `first_name`, `last_name`, `dob`, `gender`, `street_address`, `suburb`, `state`, `postcode`, `email`, `phone`, `skill_html`, `skill_css`, `skill_js`, `skill_python`, `skill_sql`, `other_skills`, `status`) VALUES
-(1, 'NET17', 'Jaimee', 'Strachan', '2001-08-31', b'11', '5 scenic crescent', 'Kalorama', 'VIC', '3766', 'strawnie3766@gmail.com', '0476162247', 0, 0, 0, 0, 0, 'N/A', 'New');
+(1, 'NET17', 'Jaimee', 'Strachan', '2001-08-31', 'Other', '5 scenic crescent', 'Kalorama', 'VIC', '3766', 'strawnie3766@gmail.com', '0476162247', 0, 0, 0, 0, 0, 'N/A', 'New'),
+(2, 'NET17', 'F', 'L', '2001-08-31', 'Male', '5 scenic crescent', 'Kalorama', 'VIC', '3766', 'strawnie3766@gmail.com', '0476162246', 0, 0, 0, 0, 0, '', 'New'),
+(3, 'NET17', 'First', 'Last', '2001-08-31', 'Female', '5 scenic crescent', 'Kalorama', 'VIC', '3766', '105753341@student.swin.edu.au', '0476162246', 1, 0, 1, 0, 1, '', 'New');
 
 -- --------------------------------------------------------
 
@@ -132,7 +134,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `eoi`
 --
 ALTER TABLE `eoi`
-  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `jobs`
