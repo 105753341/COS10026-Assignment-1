@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2025 at 10:07 AM
+-- Generation Time: May 26, 2025 at 06:33 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `project2_jobs_db(6)`
+-- Database: `project2_jobs_db`
 --
 
 -- --------------------------------------------------------
@@ -32,6 +32,8 @@ CREATE TABLE `eoi` (
   `job_ref_number` varchar(10) NOT NULL,
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
+  `dob` varchar(15) NOT NULL,
+  `gender` bit(2) NOT NULL,
   `street_address` varchar(100) NOT NULL,
   `suburb` varchar(50) NOT NULL,
   `state` varchar(3) NOT NULL,
@@ -46,6 +48,13 @@ CREATE TABLE `eoi` (
   `other_skills` text DEFAULT NULL,
   `status` enum('New','Current','Final') DEFAULT 'New'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `eoi`
+--
+
+INSERT INTO `eoi` (`EOInumber`, `job_ref_number`, `first_name`, `last_name`, `dob`, `gender`, `street_address`, `suburb`, `state`, `postcode`, `email`, `phone`, `skill_html`, `skill_css`, `skill_js`, `skill_python`, `skill_sql`, `other_skills`, `status`) VALUES
+(0, 'CYB71', 'Harrison', 'Strachan', '31/08/2001', b'11', '5 scenic crescent', 'Kalorama', 'VIC', '3766', 'strawnie3766@gmail.com', '0476162246', 0, 0, 0, 0, 0, 'N/A', 'New');
 
 -- --------------------------------------------------------
 
@@ -98,12 +107,6 @@ INSERT INTO `users` (`user_id`, `username`, `password`) VALUES
 --
 
 --
--- Indexes for table `eoi`
---
-ALTER TABLE `eoi`
-  ADD PRIMARY KEY (`EOInumber`);
-
---
 -- Indexes for table `jobs`
 --
 ALTER TABLE `jobs`
@@ -118,12 +121,6 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `eoi`
---
-ALTER TABLE `eoi`
-  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `jobs`

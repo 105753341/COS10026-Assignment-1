@@ -59,33 +59,33 @@
 
         if (isset($_POST['list_all'])) {  // If "List All" button is pressed, read all fields in EOI table
 
-            $query = "SELECT * FROM EOI";
+            $query = "SELECT * FROM eoi";
             $result = mysqli_query($conn, $query);
         }
                         
         // Lists EOI according to entered job reference number
         elseif (isset($_POST['job_ref']) && !empty($_POST['job_ref'])) {
             $job_ref = mysqli_real_escape_string($conn, $_POST['job_ref']);
-            $query = "SELECT * FROM EOI WHERE job_reference_number LIKE '%$job_ref%'";
+            $query = "SELECT * FROM eoi WHERE job_reference_number LIKE '%$job_ref%'";
             $result = mysqli_query($conn, $query);
         }
         // Lists all EOI from a selected first/last name
         elseif (isset($_POST['first_name']) && !empty($_POST['first_name']) || isset($_POST['last_name']) && !empty($_POST['last_name'])) {
             $first_name = mysqli_real_escape_string($conn, $_POST['first_name']);
             $last_name = mysqli_real_escape_string($conn, $_POST['last_name']);
-            $query = "SELECT * FROM EOI WHERE first_name LIKE '%$first_name%' OR '%$last_name%'";
+            $query = "SELECT * FROM eoi WHERE first_name LIKE '%$first_name%' OR '%$last_name%'";
             $result = mysqli_query($conn, $query);
         }
         //all selected EOI deleted
         elseif (isset($_POST['delete_job_ref']) && !empty($_POST['delete_job_ref'])) {
             $delete_job_ref = mysqli_real_escape_string($conn, $_POST['delete_job_ref']);
-            $query = "DELETE FROM EOI WHERE job_reference_number LIKE '%$delete_job_ref%'";
+            $query = "DELETE FROM eoi WHERE job_reference_number LIKE '%$delete_job_ref%'";
             $result = mysqli_query($conn, $query);
 
             if ($result) {
                 echo "<br>All EOI's with job reference number $delete_job_ref have been deleted. <br>";
 
-                $query = "SELECT * FROM EOI";
+                $query = "SELECT * FROM eoi";
                 $result = mysqli_query($conn, $query);
             } else {
                 echo "Error deleting EOI." . mysqli_error($conn);
@@ -94,13 +94,13 @@
         elseif (isset($_POST['update_job_ref']) && !empty($_POST['update_job_ref']) && isset($_POST['statuss']) && !empty($_POST['statuss'])) {
             $update_job_ref = mysqli_real_escape_string($conn, $_POST['update_job_ref']);
             $status = mysqli_real_escape_string($conn, $_POST['statuss']);
-            $query = "UPDATE EOI SET statuss = '$status' WHERE eoi_number = '$update_job_ref'";
+            $query = "UPDATE eoi SET statuss = '$status' WHERE eoi_number = '$update_job_ref'";
             $result = mysqli_query($conn, $query);
 
             if ($result) {
                 echo "<br>Status updated for EOI number: $update_job_ref. <br> ";
 
-                $query = "SELECT * FROM EOI WHERE eoi_number = '$update_job_ref'";
+                $query = "SELECT * FROM eoi WHERE eoi_number = '$update_job_ref'";
                 $result = mysqli_query($conn, $query);
             } else {
                 echo "Error updating status." . mysqli_error($conn);
