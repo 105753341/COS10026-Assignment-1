@@ -17,7 +17,7 @@
 
     <?php include 'header.inc';?>
 
-    <h1>Manager LOGIN</h1>
+    <h1 class="main-heads">Manager LOGIN</h1>
     <hr>
 
     <form method="post" action="process_login.php">

@@ -8,8 +8,9 @@
         <ul>
             <li><a href="index.php" class="webpages">Home</a></li>
             <li><a href="jobs.php" class="webpages">Jobs</a></li>
-            <li><a href="manager_login.php" class="webpages">Management</a></li>
             <li><a href="apply.php" class="webpages">Apply</a></li>
+            <li><a href="manager_login.php" class="webpages">Management</a></li>
+            <li><a href="enhancements.php" class="webpages">Enhancements</a></li>
             <li><a href="about.php" class="webpages">About us</a></li>
         </ul>
     </div>
