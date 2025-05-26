@@ -36,13 +36,13 @@
         <label for="dob">Date of Birth:</label>
         <input type="date" id="dob" name="dob" required /><br />
 
-        <fieldset>
-          <legend>Gender:</legend>
-          <label for="male">Male</label>
-          <input type="radio" id="male" name="gender" value="Male" required />
-          <label for="female">Female</label>
-          <input type="radio" id="female" name="gender" value="Female" required />
-        </fieldset><br />
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender" required>
+          <option value="">--Select--</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select><br />
 
         <label for="address">Street Address:</label>
         <input type="text" id="address" name="address" maxlength="40" required /><br />
