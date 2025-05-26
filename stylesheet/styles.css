@@ -533,4 +533,6 @@ header img {
   background-color: #f8f8f8;
   padding: 10px;
   list-style-type: circle;
+  border: 2px;
+  border-color: black
 }
