@@ -73,7 +73,8 @@
                         <li>Responsible for using PHP to modularise common sections (footer/header)</li>
                         <li>Maintaining the settings.php file</li>
                         <li>Updating the about.php page</li>
-                        <li>Providing various enhancements/QOL features (TBD)</li>
+                        <li>Adding improvements to manage.php/manager_login.php></li>
+                        <li>Providing various enhancements/QOL features (session managment, manager signup)</li>
                     </ul>
                 </dd>
                 <dt>Jashandeep</dt>
