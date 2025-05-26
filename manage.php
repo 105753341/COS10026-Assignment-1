@@ -94,13 +94,13 @@
         elseif (isset($_POST['update_job_ref']) && !empty($_POST['update_job_ref']) && isset($_POST['statuss']) && !empty($_POST['statuss'])) {
             $update_job_ref = mysqli_real_escape_string($conn, $_POST['update_job_ref']);
             $status = mysqli_real_escape_string($conn, $_POST['statuss']);
-            $query = "UPDATE eoi SET statuss = '$status' WHERE eoi_number = '$update_job_ref'";
+            $query = "UPDATE eoi SET status = '$status' WHERE EOInumber = '$update_job_ref'";
             $result = mysqli_query($conn, $query);
 
             if ($result) {
                 echo "<br>Status updated for EOI number: $update_job_ref. <br> ";
 
-                $query = "SELECT * FROM eoi WHERE eoi_number = '$update_job_ref'";
+                $query = "SELECT * FROM eoi WHERE EOInumber = '$update_job_ref'";
                 $result = mysqli_query($conn, $query);
             } else {
                 echo "Error updating status." . mysqli_error($conn);
