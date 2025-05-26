@@ -41,6 +41,9 @@ CREATE TABLE IF NOT EXISTS eoi (
 )";
 $conn->query($table_sql);
 
+// Ensure AUTO_INCREMENT is set correctly (optional, for dev safety)
+$conn->query("ALTER TABLE eoi AUTO_INCREMENT = 1");
+
 // Helper: sanitize input
 function clean_input($data) {
     return htmlspecialchars(trim(stripslashes($data)));
@@ -73,7 +76,7 @@ $skill_sql = in_array("SQL", $skills) ? "Yes" : "No";
 // Server-side validation
 if (!preg_match("/^[A-Za-z]{1,20}$/", $firstName)) $errors[] = "Invalid first name.";
 if (!preg_match("/^[A-Za-z]{1,20}$/", $lastName)) $errors[] = "Invalid last name.";
-if (!preg_match("/^\d{2}\/\d{2}\/\d{4}$/", $dob)) $errors[] = "DOB must be in dd/mm/yyyy.";
+if (!preg_match("/^\d{4}-\d{2}-\d{2}$/", $dob)) $errors[] = "DOB must be in yyyy-mm-dd.";
 if (!in_array($gender, ["Male", "Female"])) $errors[] = "Gender is required.";
 if (strlen($address) > 40 || strlen($address) == 0) $errors[] = "Invalid street address.";
 if (strlen($suburb) > 40 || strlen($suburb) == 0) $errors[] = "Invalid suburb.";
@@ -112,7 +115,7 @@ $stmt->bind_param("ssssssssssssssssss", $jobRef, $firstName, $lastName, $address
 
 // Execute and confirm
 if ($stmt->execute()) {
-    $eoi_id = $stmt->insert_id;
+    $eoi_id = $conn->insert_id; // Use $conn->insert_id instead of $stmt->insert_id
     echo "<h1>Thank you!</h1><p>Your application has been submitted.</p><p>Your EOI number is <strong>$eoi_id</strong>.</p>";
 } else {
     echo "<h1>Error:</h1><p>" . $stmt->error . "</p>";
