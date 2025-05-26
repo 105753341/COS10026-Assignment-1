@@ -66,18 +66,17 @@ $otherSkills = clean_input($_POST['otherSkills'] ?? '');
 $status = 'New';
 
 // Skill processing
-$skills = $_POST['skills'] ?? [];
-$skill_html = in_array("HTML", $skills) ? "Yes" : "No";
-$skill_css = in_array("CSS", $skills) ? "Yes" : "No";
-$skill_js = in_array("JavaScript", $skills) ? "Yes" : "No";
-$skill_python = in_array("Python", $skills) ? "Yes" : "No";
-$skill_sql = in_array("SQL", $skills) ? "Yes" : "No";
+$skill_html   = isset($_POST['skill_html'])   ? 'Yes' : 'No';
+$skill_css    = isset($_POST['skill_css'])    ? 'Yes' : 'No';
+$skill_js     = isset($_POST['skill_js'])     ? 'Yes' : 'No';
+$skill_python = isset($_POST['skill_python']) ? 'Yes' : 'No';
+$skill_sql    = isset($_POST['skill_sql'])    ? 'Yes' : 'No';
 
 // Server-side validation
 if (!preg_match("/^[A-Za-z]{1,20}$/", $firstName)) $errors[] = "Invalid first name.";
 if (!preg_match("/^[A-Za-z]{1,20}$/", $lastName)) $errors[] = "Invalid last name.";
 if (!preg_match("/^\d{4}-\d{2}-\d{2}$/", $dob)) $errors[] = "DOB must be in yyyy-mm-dd.";
-if (!in_array($gender, ["Male", "Female"])) $errors[] = "Gender is required.";
+if (!in_array($gender, ["Male", "Female", "Other"])) $errors[] = "Gender is required.";
 if (strlen($address) > 40 || strlen($address) == 0) $errors[] = "Invalid street address.";
 if (strlen($suburb) > 40 || strlen($suburb) == 0) $errors[] = "Invalid suburb.";
 $valid_states = ["VIC", "NSW", "QLD", "NT", "WA", "SA", "TAS", "ACT"];
