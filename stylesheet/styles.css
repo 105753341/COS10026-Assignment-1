@@ -566,9 +566,10 @@ header img {
   margin: 0 auto;  /* top/bottom: 0px, left/right: auto */
   background-color: #f8f8f8;
   padding: 10px;
+  margin-bottom: 35px;
   list-style-type: circle;
   border: 1px solid black;
-  text-align: center;
+  text-align: center; 
   border-collapse: collapse;
 }
 
