@@ -39,6 +39,7 @@
             <ul class="improvements">
                 <li>Control access to manage.php by checking username and password - done, compares credentials to database, creates session, with ability to destroy on logout</li>
                 <li>Create a manager registration page with server side validation requiring a unique username and a password rule, and store this information in a table</li>
+                <li>Added support for password hashing on both the login and sign up pages</li>
             </ul>
         </div>
     </section>

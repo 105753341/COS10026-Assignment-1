@@ -9,39 +9,33 @@
         }   
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $username = trim(mysqli_real_escape_string($conn, $_POST['username']));
-            $password = mysqli_real_escape_string($conn, $_POST['password']); //do not trim space in passwords, some people might have!
-        
-            $query = "SELECT * FROM users WHERE username = '$username'";
-            $result = mysqli_query($conn, $query);
+            $username = trim($_POST['username']);
+            $password = trim($_POST['password']);
 
-            if ($result && mysqli_num_rows($result) > 0) {
-                
-                $row = mysqli_fetch_assoc($result);
+            //prepare statement to prevent sql injection attacks
+            $stmt = $conn->prepare("SELECT username, password FROM users WHERE username = ?");
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+            $result = $stmt->get_result();
+    
 
-                if($username == $row['username'] && $password == $row['password']) {
-                    $_SESSION['username'] = $username;
-                    $_SESSION['password'] = $password; //compares input to db
-                    $_SESSION['error'] = null;
-
-                    header("Location:manage.php"); //redirects to managers page (manage.php)
+            //if a user is found with the entered username
+            // ($user is now an associative array, $user['password'] returns retrieved hashed password)
+            // ($user['username'] would return username)
+            if ($user = $result->fetch_assoc()) {
+                // verify the entered password with the hashed password in the database
+                if (password_verify($password, $user['password'])) {
+                    // regenerate session ID to prevent session fixation attacks
+                    session_regenerate_id(true);
+                    // save the username in the session to track the user login status
+                    $_SESSION['username'] = $user['username'];
+                    header('Location:manage.php'); //redirects to managers page (manage.php)
                     exit;
-                    //die();
-                }
-                else {
-                    $_SESSION['error'] = "Invalid username or password. Please try again";
-                    header('Location: manager_login.php');
-                    exit;
-                    //prints invalid username or password on failed log in attempt
                 }
             }
-
-             else {
-                    $_SESSION['error'] = "Invalid username or password. Please try again";
-                    header('Location: manager_login.php');
-                    exit;
-                    //prints invalid username or password on failed log in attempt
-                }
-            mysqli_close($conn); //ends connection to db
+            // If login fails, store an error message (no details revealed for security), this will only executed if the any of the above conditionals arent met
+            $_SESSION['error'] = "Invalid username or password. Please try again.";
+            header('Location:manager_login.php');
+            exit;
         }
 ?>
