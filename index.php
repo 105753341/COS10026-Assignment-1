@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to TechNova – a leader in IT services, innovation, and careers in technology.">
     <meta name="keywords" content="TechNova, IT company, technology, innovation, careers, business">
-    <title>IT business</title>
+    <title>TechNova</title>
     <link rel="icon" type="image/png" href="images/faviconlogo.png">
     <meta name="author" content="Harrison Strachan">
     <link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
@@ -15,11 +15,10 @@
 
       <div class="parallax"></div> <!-- parallax image -->
 
+      <main class="index-main"> 
         <h1 class="main-heads">
             About the company
-        </h1>
-
-        <main class="main"> 
+        </h1>        
             <div class="about-company">
                 <div class="about">
                         <p>At TechNova Solutions, we are pioneers in IT services committed to transforming businesses through innovative technology.
@@ -38,7 +37,6 @@
                         </p>
                     </div>
             </div>
-        </main>
     
     <h1 class="main-heads">Why Join Us:</h1>
 
@@ -58,9 +56,13 @@
                     </div>
         </div>
 
+    </main>
+
     <!-- Large tagline text box at bottom of page -->
+    <div class="tagline-container">
     <h2 class="tagline">If you're ready to take your career to new heights and be part of an exciting company shaping the future of technology, TechNova is the 
         place for you. Join us in building a smarter, more connected world.</h2>
+    </div>
 
     <?php include 'footer.inc';?>
 </body>

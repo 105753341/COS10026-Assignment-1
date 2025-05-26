@@ -12,7 +12,9 @@ $result = mysqli_query($conn, $query);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Job Listings</title>
+    <meta name="description" content="A page listing the jobs avaliable at technova">
+    <meta name="keywords" content="TechNova, jobs, hiring, innovation, careers, business">
+    <title>Job Listings - TechNova</title>
     <link rel="icon" type="image/png" href="images/faviconlogo.png">
     <link rel="stylesheet" href="stylesheet/styles.css">
 </head>

@@ -6,7 +6,7 @@
     <meta name="description" content="A web page to view general info about our group">
     <meta name="keywords" content="TechNova, about us, team, student group, developer roles, members, contributions, html5, php">
     <meta name="author" content="Alexander">
-    <title>About us</title>
+    <title>About us - TechNova</title>
     <link rel="icon" type="image/png" href="images/faviconlogo.png">
     <link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
 </head>

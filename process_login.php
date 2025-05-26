@@ -33,13 +33,13 @@
                     //prints invalid username or password on failed log in attempt
                 }
             }
-            
+
              else {
                     $_SESSION['error'] = "Invalid username or password. Please try again";
                     header('Location: manager_login.php');
                     exit;
                     //prints invalid username or password on failed log in attempt
                 }
-            //mysqli_close($conn); //ends connection to db
+            mysqli_close($conn); //ends connection to db
         }
 ?>
