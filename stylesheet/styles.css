@@ -536,4 +536,5 @@ header img {
   border: 1px solid;
   border-color: black;
   text-align: center;
+  border-collapse: collapse;
 }
