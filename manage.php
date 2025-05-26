@@ -131,11 +131,11 @@
 
                 while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>
-                            <td>" . $row["eoi_number"] . "</td>
-                            <td>" . $row["job_reference_number"] . "</td>
+                            <td>" . $row["EOInumber"] . "</td>
+                            <td>" . $row["job_ref_number"] . "</td>
                             <td>" . $row["first_name"] . "</td>
                             <td>" . $row["last_name"] . "</td>
-                            <td>" . $row["date_of_birth"] . "</td>
+                            <td>" . $row["dob"] . "</td>
                             <td>" . $row["gender"] . "</td>
                             <td>" . $row["street_address"] . "</td>
                             <td>" . $row["suburb"] . "</td>
@@ -143,8 +143,13 @@
                             <td>" . $row["postcode"] . "</td>
                             <td>" . $row["email"] . "</td>
                             <td>" . $row["phone"] . "</td>
+                            <td>" . $row["skill_html"] . "</td>
+                            <td>" . $row["skill_css"] . "</td>
+                            <td>" . $row["skill_js"] . "</td>
+                            <td>" . $row["skill_python"] . "</td>
+                            <td>" . $row["skill_sql"] . "</td>
                             <td>" . $row["other_skills"] . "</td>
-                            <td>" . $row["statuss"] . "</td>
+                            <td>" . $row["status"] . "</td>
                         </tr>";
             }
             echo "</table>";
