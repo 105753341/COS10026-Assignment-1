@@ -542,19 +542,19 @@ header img {
 }
 
 /* enhancements.php lists styles (remove standard bullet point)*/
-#improvements {
+.improvements {
   list-style: none;
   padding-left: 0;
 }
 
 /* enhancements.php lists styles (padding/positioning)*/
-#improvements li {
+.improvements li {
   position: relative;
   padding-left: 0.6em;
 }
 
 /* enhancements.php lists styles (replace with emoji + padding)*/
-#improvements li::before {
+.improvements li::before {
   content: "✔️";
   left: 0;
   padding-right: 0.3em;
