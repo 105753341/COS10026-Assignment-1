@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2025 at 10:04 AM
+-- Generation Time: May 26, 2025 at 12:24 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -29,17 +29,17 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `eoi` (
   `EOInumber` int(11) NOT NULL,
-  `job_ref_number` varchar(10) NOT NULL,
-  `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(50) NOT NULL,
-  `dob` varchar(15) NOT NULL,
-  `gender` enum('Male','Female','Other') NOT NULL,
-  `street_address` varchar(100) NOT NULL,
-  `suburb` varchar(50) NOT NULL,
-  `state` varchar(3) NOT NULL,
-  `postcode` varchar(4) NOT NULL,
+  `job_ref_number` varchar(5) NOT NULL,
+  `first_name` varchar(20) NOT NULL,
+  `last_name` varchar(20) NOT NULL,
+  `street_address` varchar(40) NOT NULL,
+  `suburb` varchar(40) NOT NULL,
+  `state` enum('VIC','NSW','QLD','NT','WA','SA','TAS','ACT') NOT NULL,
+  `postcode` char(4) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `phone` varchar(20) NOT NULL,
+  `phone` varchar(12) NOT NULL,
+  `dob` varchar(10) NOT NULL,
+  `gender` enum('Male','Female') NOT NULL,
   `skill_html` varchar(3) DEFAULT NULL,
   `skill_css` varchar(3) DEFAULT NULL,
   `skill_js` varchar(3) DEFAULT NULL,
@@ -48,6 +48,14 @@ CREATE TABLE `eoi` (
   `other_skills` text DEFAULT NULL,
   `status` enum('New','Current','Final') DEFAULT 'New'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `eoi`
+--
+
+INSERT INTO `eoi` (`EOInumber`, `job_ref_number`, `first_name`, `last_name`, `street_address`, `suburb`, `state`, `postcode`, `email`, `phone`, `dob`, `gender`, `skill_html`, `skill_css`, `skill_js`, `skill_python`, `skill_sql`, `other_skills`, `status`) VALUES
+(1, 'CYB71', 'Jashandeep', 'Kaur', '2 Jacana Ave', 'Melbourne', 'VIC', '3107', 'jashandeepk278@gmail.com', '0420406071', '2025-05-04', 'Female', 'No', 'No', 'No', 'No', 'No', '', 'New'),
+(2, 'CYB71', 'Jashandeep', 'Kaur', '2 Jacana Ave', 'Melbourne', 'VIC', '3107', 'jashandeepk278@gmail.com', '0420406071', '2025-05-04', 'Female', 'No', 'No', 'No', 'No', 'No', '', 'New');
 
 -- --------------------------------------------------------
 
@@ -76,25 +84,6 @@ INSERT INTO `jobs` (`job_id`, `title`, `reference`, `reporting_to`, `description
 (1, 'Network Administrator', 'NET17', 'Network Architect', 'Responsible for managing and maintaining the organization\'s network infrastructure.', '<ul><li>Install and maintain network devices</li><li>Ensure security</li><li>Diagnose network issues</li></ul>', '<ol><li>CCNA/Network+ Certification</li><li>Strong troubleshooting skills</li><li>Experience in network admin</li></ol>', 'On-site', '$50,000 - $80,000', 'Full-Time'),
 (2, 'Cybersecurity Analyst', 'CYB71', 'Chief Information Security Officer', 'Protect systems from cyber threats.', '<ul><li>Monitor traffic</li><li>Simulate attacks</li><li>Handle breaches</li></ul>', '<ol><li>Security+ or CEH</li><li>Bachelor\'s in IT</li><li>Some work experience</li></ol>', 'Hybrid', 'Competitive', 'Full-Time');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `user_id` int(11) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `password` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`user_id`, `username`, `password`) VALUES
-(1, '105753341', '1234abcd');
-
 --
 -- Indexes for dumped tables
 --
@@ -112,12 +101,6 @@ ALTER TABLE `jobs`
   ADD PRIMARY KEY (`job_id`);
 
 --
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`user_id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -125,19 +108,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `eoi`
 --
 ALTER TABLE `eoi`
-  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
   MODIFY `job_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

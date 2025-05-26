@@ -74,11 +74,11 @@
 
         <fieldset>
           <legend>Skills:</legend>
-          <label><input type="checkbox" name="skills[]" value="HTML" /> HTML</label><br />
-          <label><input type="checkbox" name="skills[]" value="CSS" /> CSS</label><br />
-          <label><input type="checkbox" name="skills[]" value="JavaScript" /> JavaScript</label><br />
-          <label><input type="checkbox" name="skills[]" value="Python" /> Python</label><br />
-          <label><input type="checkbox" name="skills[]" value="SQL" /> SQL</label><br />
+          <label><input type="checkbox" name="skill_html" value="1"> HTML</label><br />
+          <label><input type="checkbox" name="skill_css" value="1"> CSS</label><br />
+          <label><input type="checkbox" name="skill_js" value="1"> JavaScript</label><br />
+          <label><input type="checkbox" name="skill_python" value="1"> Python</label><br />
+          <label><input type="checkbox" name="skill_sql" value="1"> SQL</label><br />
         </fieldset><br />
 
         <label for="otherSkills">Other Skills:</label><br />
