@@ -10,8 +10,8 @@
         }   
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $username = trim(mysqli_real_escape_string($conn, $_POST['username']));
-            $password = mysqli_real_escape_string($conn, $_POST['password']); //do not trim space in passwords, some people might have!
+            $username = trim($_POST['username']);
+            $password = trim($_POST['password']); 
         
             $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
             //$result = mysqli_query($conn, $query); not yet
@@ -31,6 +31,8 @@
                     $_SESSION['error'] = "Username already taken.";
                     $error = true;
                 }
+
+                $stmt->close(); //close connection
             }
 
             // check if password meets our requirements 
@@ -44,14 +46,15 @@
                 $error = true;
             }
 
-
+            // if not error hash and insert into db
             if ($error == false)
             {
+                $hashedPassword = password_hash($password, PASSWORD_DEFAULT); //hash the password
                 $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)"); //now 2 params
-                $stmt->bind_param("ss", $username, $password); //refer to previous, ss just means string string
+                $stmt->bind_param("ss", $username, $hashedPassword); //refer to previous, ss just means string string
                 $_SESSION['error'] = "User succesfully signed up"; 
                 $stmt->execute();
-                
+
                 header("Location: manager_signup.php");
                 exit;
                 //maybe bad practice to use "error" session, but serves the purpose we need
