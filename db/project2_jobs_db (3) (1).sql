@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2025 at 09:17 AM
+-- Generation Time: May 26, 2025 at 10:04 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -48,22 +48,6 @@ CREATE TABLE `eoi` (
   `other_skills` text DEFAULT NULL,
   `status` enum('New','Current','Final') DEFAULT 'New'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `eoi`
---
-
-INSERT INTO `eoi` (`EOInumber`, `job_ref_number`, `first_name`, `last_name`, `dob`, `gender`, `street_address`, `suburb`, `state`, `postcode`, `email`, `phone`, `skill_html`, `skill_css`, `skill_js`, `skill_python`, `skill_sql`, `other_skills`, `status`) VALUES
-(1, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', '', '', '', '', '', 'wd;ld', 'New'),
-(2, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', '', '', '', '', '', 'wd;ld', 'New'),
-(3, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'wd;ld', 'New'),
-(4, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'Yes', 'Yes', 'Yes', 'No', 'wd;ld', 'New'),
-(5, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'wd;ld', 'New'),
-(6, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'wd;ld', 'New'),
-(7, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'wd;ld', 'New'),
-(8, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'wd;ld', 'New'),
-(9, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-05-20', 'Other', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'dpkkd', 'New'),
-(10, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-05-20', 'Other', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'dpkkd', 'New');
 
 -- --------------------------------------------------------
 
