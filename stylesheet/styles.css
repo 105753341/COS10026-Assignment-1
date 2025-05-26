@@ -37,8 +37,6 @@ nav a:hover {
   color: white;
 }
 
-
-
 /* header logo styling*/
 .logo_cropped {
   margin-bottom: -3%;
@@ -218,7 +216,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 40px;
-  font-family: Arial, Helvetica, sans-serif; /* shorthand */
+  font-family: Arial, Helvetica, sans-serif; 
 }
 
 .footer-section h2,
@@ -344,7 +342,7 @@ form select {
   margin-top: 5px;
   border: 1px solid maroon;
   border-radius: 5px;
-  font: normal 1rem Arial, Helvetica, sans-serif; /* shorthand */
+  font-family: Arial, Helvetica, sans-serif; 
 }
 
 form input:focus,
