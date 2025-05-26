@@ -1,3 +1,4 @@
+<?php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +35,7 @@
         <input type="text" id="lastName" name="lastName" maxlength="20" pattern="[A-Za-z]+" required title="Only letters are allowed" /><br />
 
         <label for="dob">Date of Birth:</label>
-        <input type="text" id="dob" name="dob" required placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" title="Format: dd/mm/yyyy" /><br />
+        <input type="date" id="dob" name="dob" required /><br />
 
         <fieldset>
           <legend>Gender:</legend>
