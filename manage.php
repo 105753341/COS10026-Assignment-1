@@ -93,7 +93,7 @@
         // Lists EOI according to entered job reference number
         elseif (isset($_POST['job_ref']) && !empty($_POST['job_ref'])) {
             $job_ref = mysqli_real_escape_string($conn, $_POST['job_ref']);
-            $query = "SELECT * FROM eoi WHERE job_reference_number LIKE '%$job_ref%'";
+            $query = "SELECT * FROM eoi WHERE job_ref_number LIKE '%$job_ref%'";
             $result = mysqli_query($conn, $query);
         }
         // Lists all EOI from a selected first/last name
@@ -138,9 +138,6 @@
             echo "<br>
             <div>
             <table id='manager-table' >
-                    <thead>
-                    <tr><th>EOI</th></tr>
-                    </thead>
                         <tr>
                             <th>EOI Number</th>
                             <th>Job Reference</th>

@@ -566,8 +566,13 @@ header img {
   background-color: #f8f8f8;
   padding: 10px;
   list-style-type: circle;
-  border: 1px solid;
-  border-color: black;
+  border: 1px solid black;
   text-align: center;
   border-collapse: collapse;
+}
+
+#manager-table th,
+#manager-table td {
+  border: 1px solid black; /* This adds lines between cells */
+  padding: 8px;
 }
