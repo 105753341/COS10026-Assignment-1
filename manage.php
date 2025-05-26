@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+    if (!isset($_SESSION['username'])) { //if username isnt set, return
+        header("Location: manager_login.php");
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,12 +16,26 @@
     <meta name="author" content="Harrison Strachan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet/styles.css">
-
 </head>
  
 <body>
-    <?php include 'header.inc';?>
-
+    <!-- not modularised header here since we want to remove the linebreak -->
+    <header>
+        <a href="index.php"><img src="images/logo_cropped.png" alt="Company Logo"></a>
+        <nav>
+            <a href="index.php">Home Page</a> 
+            <a href="jobs.php">Job Descriptions</a> 
+            <a href="manager_login.php">Management</a>
+            <a href="apply.php">Application Page</a>
+            <a href="about.php">Group details</a>
+            <a href="mailto:info@technova.com.au">&#128231;</a> 
+            </nav>
+    </header>
+    <section class="login-section">
+        <h1> Welcome <em><?php echo htmlspecialchars($_SESSION['username']); ?></em></h1>
+        <a href="process_logout.php" class="btn">Logout</a>
+    </section>
+    <hr>
     <h1>Manage EOIs</h1>
     <hr>
 

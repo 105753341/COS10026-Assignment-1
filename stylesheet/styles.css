@@ -11,8 +11,6 @@ last modified: 14/04/2025
 description: styles sheet for nova tech website, styles for about.php, apply.php, index.php, jobs.php
 
 */
-
-
 /* navigation menu styles*/
 nav {
   display: flex;
@@ -320,11 +318,13 @@ form textarea {
 }
 
 form input[type="text"],
+form input[type="password"],
 form input[type="email"],
 form input[type="tel"],
 form textarea,
 form select {
   width: 100%;
+  box-sizing: border-box;
   padding: 10px;
   margin-top: 5px;
   border: 1px solid maroon;
@@ -518,4 +518,11 @@ header img {
   margin-bottom:-3%; 
   width:15%;
   height:15%;
+}
+
+/* manage.php login section styles*/
+.login-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

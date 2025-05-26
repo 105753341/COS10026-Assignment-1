@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,45 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet/styles.css">
     
-</head>
-
-
-    <?php
-        session_start();
-        require_once("settings.php"); //opens the connection to the db
-        $conn = mysqli_connect($host, $user, $pwd, $sql_db);
-
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if($conn) {
-                $username = mysqli_real_escape_string($conn, $_POST['username']);
-                $password = mysqli_real_escape_string($conn, $_POST['password']);
-            
-                $query = "SELECT * FROM users WHERE username = '$username'";
-                $result = mysqli_query($conn, $query);
-
-                if ($result && mysqli_num_rows($result) > 0) {
-                    
-                    $row = mysqli_fetch_assoc($result);
-
-                    if($username == $row['username'] && $password == $row['password']) {
-                        $_SESSION['username'] = $username;
-                        $_SESSION['password'] = $password; //compares input to db
-
-                        header("Location:manage.php"); //redirects to managers page (manage.php)
-                        die();
-                    }
-                    else {
-                        echo "<p>Invalid username or password.</p>"; 
-                        //prints invalid username or password on failed log in attempt
-                    }
-                }
-
-                mysqli_close($conn); //ends connection to db
-            }
-        }
-    ?>
-
-    
+</head>    
 <body>
 
     <?php include 'header.inc';?>
@@ -54,7 +20,7 @@
     <h1>Manager LOGIN</h1>
     <hr>
 
-    <form method="post" action="manage.php">
+    <form method="post" action="process_login.php">
         
         <label for="username">Username:</label>
         <input type="text" name="username" required>
