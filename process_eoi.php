@@ -63,11 +63,11 @@ $otherSkills = clean_input($_POST['otherSkills'] ?? '');
 $status = 'New';
 
 // Skill processing
-$skill_html   = isset($_POST['skill_html'])   ? 'Yes' : 'No';
-$skill_css    = isset($_POST['skill_css'])    ? 'Yes' : 'No';
-$skill_js     = isset($_POST['skill_js'])     ? 'Yes' : 'No';
-$skill_python = isset($_POST['skill_python']) ? 'Yes' : 'No';
-$skill_sql    = isset($_POST['skill_sql'])    ? 'Yes' : 'No';
+$skill_html   = isset($_POST['skill_html'])   ? '1' : '0';
+$skill_css    = isset($_POST['skill_css'])    ? '1' : '0';
+$skill_js     = isset($_POST['skill_js'])     ? '1' : '0';
+$skill_python = isset($_POST['skill_python']) ? '1' : '0';
+$skill_sql    = isset($_POST['skill_sql'])    ? '1' : '0';
 
 // Server-side validation
 if (!preg_match("/^[A-Za-z]{1,20}$/", $firstName)) $errors[] = "Invalid first name.";
