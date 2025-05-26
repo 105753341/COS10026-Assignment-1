@@ -570,3 +570,9 @@ header img {
   text-align: center;
   border-collapse: collapse;
 }
+
+#manager-table th,
+#manager-table td {
+  border: 1px solid black; /* This adds lines between cells */
+  padding: 8px;
+}
