@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2025 at 08:41 AM
+-- Generation Time: May 26, 2025 at 09:17 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -33,18 +33,18 @@ CREATE TABLE `eoi` (
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `dob` varchar(15) NOT NULL,
-  `gender` bit(2) NOT NULL,
+  `gender` enum('Male','Female','Other') NOT NULL,
   `street_address` varchar(100) NOT NULL,
   `suburb` varchar(50) NOT NULL,
   `state` varchar(3) NOT NULL,
   `postcode` varchar(4) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone` varchar(20) NOT NULL,
-  `skill_html` tinyint(1) DEFAULT 0,
-  `skill_css` tinyint(1) DEFAULT 0,
-  `skill_js` tinyint(1) DEFAULT 0,
-  `skill_python` tinyint(1) DEFAULT 0,
-  `skill_sql` tinyint(1) DEFAULT 0,
+  `skill_html` varchar(3) DEFAULT NULL,
+  `skill_css` varchar(3) DEFAULT NULL,
+  `skill_js` varchar(3) DEFAULT NULL,
+  `skill_python` varchar(3) DEFAULT NULL,
+  `skill_sql` varchar(3) DEFAULT NULL,
   `other_skills` text DEFAULT NULL,
   `status` enum('New','Current','Final') DEFAULT 'New'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -54,7 +54,16 @@ CREATE TABLE `eoi` (
 --
 
 INSERT INTO `eoi` (`EOInumber`, `job_ref_number`, `first_name`, `last_name`, `dob`, `gender`, `street_address`, `suburb`, `state`, `postcode`, `email`, `phone`, `skill_html`, `skill_css`, `skill_js`, `skill_python`, `skill_sql`, `other_skills`, `status`) VALUES
-(0, 'CYB71', 'Harrison', 'Strachan', '31/08/2001', b'11', '5 scenic crescent', 'Kalorama', 'VIC', '3766', 'strawnie3766@gmail.com', '0476162246', 0, 0, 0, 0, 0, 'N/A', 'New');
+(1, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', '', '', '', '', '', 'wd;ld', 'New'),
+(2, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', '', '', '', '', '', 'wd;ld', 'New'),
+(3, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'wd;ld', 'New'),
+(4, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'Yes', 'Yes', 'Yes', 'No', 'wd;ld', 'New'),
+(5, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'wd;ld', 'New'),
+(6, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'wd;ld', 'New'),
+(7, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'wd;ld', 'New'),
+(8, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-04-29', 'Male', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'wd;ld', 'New'),
+(9, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-05-20', 'Other', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'dpkkd', 'New'),
+(10, 'NET17', 'SATHIL', 'WEERAKKODI', '2025-05-20', 'Other', '4 RAHNI CL', 'Galle', 'VIC', '3805', 'sathil.official@gmail.com', '0422883433', 'No', 'No', 'No', 'No', 'No', 'dpkkd', 'New');
 
 -- --------------------------------------------------------
 
@@ -127,6 +136,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `eoi`
+--
+ALTER TABLE `eoi`
+  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `jobs`
