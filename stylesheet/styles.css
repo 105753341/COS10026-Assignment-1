@@ -559,16 +559,29 @@ header img {
   padding-right: 0.3em;
 }
 
+/* manager table division styles */
+#manager-table-div {
+  width: 80%; 
+  margin: 0 auto;
+  justify-content: center; 
+  overflow: auto; 
+  border: 1px solid #ccc;
+  margin-bottom: 35px; 
+}
+
 /* manager table styles */
 #manager-table {
   margin: 0 auto;  /* top/bottom: 0px, left/right: auto */
   background-color: #f8f8f8;
   padding: 10px;
-  margin-bottom: 35px; 
   list-style-type: circle;
   border: 1px solid black;
   text-align: center;
   border-collapse: collapse;
+}
+
+#manager-table th {
+  background-color: #c9c9c9;
 }
 
 #manager-table th,

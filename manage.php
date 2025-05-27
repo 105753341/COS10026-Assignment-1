@@ -120,7 +120,7 @@
 
         if ($result && mysqli_num_rows($result) > 0) {
             echo "<br>
-            <div>
+            <div id='manager-table-div'>
             <table id='manager-table' >
                         <tr>
                             <th>EOI Number</th>
@@ -167,7 +167,7 @@
                             <td>" . $row["status"] . "</td>
                         </tr>";
             }
-            echo "</table>";
+            echo "</table></div>";
         }
 
         mysqli_close($conn); //closes database connection
