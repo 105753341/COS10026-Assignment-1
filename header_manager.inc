@@ -1,3 +1,4 @@
+<!-- why not just use header.inc for first part? because we don't want the hr in the original header.inc -->
 <header>
     <a href="index.php"><img src="images/logo_cropped.png" alt="Company Logo"></a>
     <nav>

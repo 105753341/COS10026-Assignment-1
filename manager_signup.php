@@ -35,21 +35,7 @@
     <hr>
 
     <form method="post" action="process_signup.php">
-        
-        <label for="username">Username:</label>
-        <input type="text" name="username" required>
-        
-        <br>
-
-        <label for="password">Password:</label>
-        <input type="password" name="password" required>
-
-        <!-- show label error if has contents, will be empty if no error, and thus not shown. html special char for security -->
-        <label>
-            <?php if (isset($error)) echo htmlspecialchars($error); ?>
-        </label>
-        <br>
-        <input type="hidden" name="token" value="manager">
+        <?php include 'user_credentials_box.inc';?>
         <input type="submit" value="Sign up">
     </form>
 
